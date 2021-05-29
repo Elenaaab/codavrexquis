@@ -1,0 +1,263 @@
+/* Le root permet de définir des variables utilisables dans tout le css qui seront faciles à changer commce ceci par exemple : --couleur-texte: #022d46;  */
+:root {
+
+    --titre1: 50px;
+    --titre2: 20px;
+    --titre3: 30px;
+    --texte: 15px;
+    --texte2:18px;
+    --couleur-texte1: #FFC300;
+    --couleur-texte2: white;
+    --couleur-titre: #F5C028;
+    --couleur-nav: #065BA1;
+} 
+.deco1 {
+    clip-path: polygon(100% 76%, 100% 100%, 0 100%);
+    background-color : #B9CDFC;
+    position:fixed;
+    top:auto;
+    width: 100%; 
+    height:100%; 
+    z-index: -1;
+}
+.deco2 {
+    clip-path: polygon(100% 0, 0 35%, 0 0);
+    background-color :#B6DAF8;
+    position:fixed;
+    top:0%;
+    width: 100%; 
+    height:100%; 
+    z-index: -1;
+}
+
+.deco3 {
+    clip-path: inset(48% 0 0 0);
+    background-color : #B9CDFC;
+    position:fixed;
+    top:auto;
+    width: 100%; 
+    height:100%; 
+    z-index: -1;
+}
+.deco4 {
+    clip-path: polygon(0 100%, 35% 0 ,0 0 );
+    background-color : #B9CDFC;
+    position:fixed;
+    top:auto;
+    width: 100%; 
+    height:100%; 
+    z-index: -1;
+}
+
+.deco5 {
+    clip-path: inset(75% 0 0 0);
+    background-color : var(--couleur-texte1);
+    position:fixed;
+    top:auto;
+    width: 100%; 
+    height:100%; 
+    z-index: -2;
+}
+
+body {
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+    background-color:#065BA1;
+    font-size: var(--texte);
+    color: var(--couleur-texte);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Jeu enfant tableaux et formes */
+
+.jeu {
+    display:inline-block;
+    margin:4px;
+    font-size: var(--texte);
+    text-align: center;
+    background-color: #161D8A;    
+    height: 500px; 
+	width: 600px; 
+    z-index: 0;
+
+}
+
+.tableau {
+
+    display:inline-block;
+    margin:4px;
+    font-size: var(--texte);
+    text-align: center;
+    background-color:white;
+    border:none;
+    height: 500px; 
+	width: 600px; 
+    z-index: 0;
+
+}
+
+/* A venir les formes colorées */
+
+
+/* --------------HOMEPAGE---------------------- */
+
+/* Titre */
+
+header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+h1 {
+    font-size: var(--titre1);
+    color: var(--couleur-titre);
+}
+h2 {
+    font-size: var(--titre2);
+    color:var(--couleur-titre);
+}
+h3 {
+    font-size: var(--titre3);
+    color:var(--couleur-titre);
+}
+
+h4 {
+    font-size: var(--texte2);
+    color:var(--couleur-texte2);
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Partie main  */
+
+.main {
+    max-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.game {
+    padding: 10px;
+    margin-top:20px;
+    font-size: var(--texte2);
+    text-align: center;
+    color: var(--couleur-texte2);
+    border: solid 0.1px #161D8A;
+    border-radius: 50%;
+    height: 200px; 
+	width: 200px; 
+    background-color: #161D8A;
+}
+.rules {
+    display:block;
+    padding: 10px;
+    margin-bottom:20px;
+    font-size: var(--texte);
+    text-align: center;
+    color: var(--couleur-texte2);
+}
+blockquote {
+    font-style: italic;
+    text-align:center;
+}
+/* Liens */
+ nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--couleur-nav); 
+    align-items: center;
+    font-size: 12px;
+}
+nav a:focus, a:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color:var(--couleur-nav);
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--couleur-titre);
+    font-size: 15px;
+}
+ .navigateur {
+   z-index: 1;  
+   padding-bottom:10px;
+ }
+
+li {
+    margin-right:10px;
+    padding-right:1px;
+}
+/* -------------- PAGES JEU --------------- */
+ 
+ .introjeu {
+    font-size: var(--texte2);
+    text-align: left;
+    color: var(--couleur-texte2);
+}
+ /* Version du jeu active */
+ .versionactive {
+    text-transform: uppercase;
+    color: var(--couleur-texte1); 
+    font-size: 15px;
+}
+ .versioninactive {
+     color:white;
+}
+/* Formulaire */
+form {
+    display: flex;
+    color:white;
+    ;
+}
+.words {
+    background-color: var(--couleur-nav);
+    color : var(--couleur-texte1);
+    font-weight: lighter;
+    border:none;
+    border-bottom : solid 1px #4cced3;
+    padding:2px;
+    margin:2px;
+}
+.button { 
+    background-color: var(--couleur-nav);
+    color : var(--couleur-texte1);
+    font-weight: bold;
+    padding: 5px;
+    margin-top:5px;
+    cursor:pointer;
+    border:none;
+}
+/* Phrase exemple */
+.exemple {
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--couleur-texte1);
+    margin-top:40px;
+}
+/* Résultat */
+.reponseex {
+    margin-top:200px;
+    margin-bottom:50px;
+    font-size: 50px;
+    text-align: center;
+    color: var(--couleur-nav);
+}
+.reponse {
+    margin-top:50px;
+    margin-bottom:50px;
+    color : var(--couleur-texte1);
+    font-weight: lighter;
+    border:none;
+    border-bottom : solid 1px #4cced3;
+    padding:10px;
+    max-width: 500px;
+    text-align: center;
+
+}
+/* Interrupteur */
+
