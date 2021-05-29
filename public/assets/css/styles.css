@@ -72,7 +72,7 @@ body {
 /* Jeu enfant tableaux et formes */
 
 .jeu {
-    display:inline-block;
+    display:flex;
     margin:4px;
     font-size: var(--texte);
     text-align: center;
@@ -97,9 +97,137 @@ body {
 
 }
 
-/* A venir les formes colorées */
+/* Positionner les formes colorées */
 
+.forme1 {
 
+    clip-path: polygon(7% 2%, 5% 22%, 33% 24%);
+    background-color: rgb(148, 24, 24);
+    display:flex;
+    z-index: 1;
+    height:400px;
+    width:400px;
+    position:fixed;
+    /* top:auto; */
+    border:solid 1px var(--couleur-texte1);
+}
+.forme2 {
+
+    clip-path: polygon(50% 0%, 85% 47%, 53% 90%, 12% 44%);
+    background-color: rgb(75, 216, 10);
+    display:flex;
+    z-index: 1;
+    height:100px;
+    width:100px;
+    position:fixed;
+    /* top:auto; */
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme3 {
+
+    clip-path: inset(21% 20% 31% 10%);
+    background-color: rgb(216, 213, 10);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    /* top:auto; */
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme4 {
+
+    clip-path: polygon(25% 33%, 69% 34%, 80% 63%, 7% 85%);
+    background-color: rgb(216, 10, 72);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme5 {
+
+    background-color: rgb(10, 209, 216);
+    display:flex;
+    z-index: 1;
+    height:100px;
+    width:100px;
+    border-radius: 50px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme6 {
+
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: rgb(197, 233, 235);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+
+}
+
+.forme7 {
+
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    background-color: rgb(196, 94, 11);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme8 {
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 49%);
+    background-color: rgb(11, 196, 88);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme9 {
+
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: rgb(113, 11, 196);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+}
+
+.forme10 {
+
+    clip-path: ellipse(25% 40% at 50% 50%);
+    background-color: rgb(238, 54, 8);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+    position:fixed;
+    top:auto;
+    border:solid 1px var(--couleur-texte1);
+}
 /* --------------HOMEPAGE---------------------- */
 
 /* Titre */
