@@ -1,14 +1,12 @@
 <?php
 
+//============================= Ici, on traite les échanges entre l'user et la database ===============================
 
-// 1. Récupérer les réponses utilisateur
 
-// Je fabrique une méga fonction qui récupère, vérifie et transforme : 
+// 1. Récupérer les réponses utilisateur :
 
     require_once __DIR__ . '/assets/functions.php';
     require_once __DIR__ . '/app/db.php';
-
-// J'appelle cette méga fonction : 
 
                      // On initialise les variables 
 
@@ -27,7 +25,8 @@
                     && !empty($_GET["adjectif"])
                     ) {
                     // je récupère les info provenant du formulaire si les valeurs sont bien une chaine de caractères :
-               // REGEX :
+
+               // POINT INFO ===> REGEX :
 
                /*(a|b|z) =>  a ou b ou z
                [a-z0-9] => alphanumérique
@@ -60,7 +59,7 @@
                                  ";             
                     $pdo->exec($insertQuery);
 
-// 3. J'extrais les résultats  :
+// 3. J'extrais les résultats de manière aléatoire dans un tableau  :
 
                     $result = $pdo->query("SELECT word FROM `codavre` WHERE type='sujet' ORDER BY RAND() LIMIT 1;")->fetch(PDO::FETCH_NUM);
                     $sujet = $result[0];
@@ -70,9 +69,11 @@
                     $verbe = $result[0];
                     $result = $pdo->query("SELECT word FROM `codavre` WHERE type='complement' ORDER BY RAND() LIMIT 1;")->fetch(PDO::FETCH_NUM);
                     $complement = $result[0];
-                 
+
+                //  Si ce chemin à étapes a échoué, alors j'affiche une erreur
+
                     } else {
                     echo "Erreur";
                 }
-// 4. J'affiche les résultats dans les div prévues à cet effet :
+// 4. J'affiche les résultats dans les div prévues à cet effet directement en short tag sur la page html avec un foreach par exemple :
 

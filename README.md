@@ -14,7 +14,7 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 
 ### 1.Construction du html
 
-* 3 pages à construire "en dur" : homepage avec histoire de l'invention du jeu et présentation des deux versions, une page par version du jeu
+* 4 pages à construire "en dur" : homepage avec histoire de l'invention du jeu et présentation des deux versions, une page par version du jeu et un descriptif du projet
   
 * sur chaque page : barre de navigation en footer
 
