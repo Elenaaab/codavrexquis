@@ -1,6 +1,5 @@
 /* Le root permet de définir des variables utilisables dans tout le css qui seront faciles à changer commce ceci par exemple : --couleur-texte: #022d46;  */
 :root {
-
     --titre1: 50px;
     --titre2: 20px;
     --titre3: 30px;
@@ -29,7 +28,6 @@
     height:100%; 
     z-index: -1;
 }
-
 .deco3 {
     clip-path: inset(48% 0 0 0);
     background-color : #B9CDFC;
@@ -48,7 +46,6 @@
     height:100%; 
     z-index: -1;
 }
-
 .deco5 {
     clip-path: inset(75% 0 0 0);
     background-color : var(--couleur-texte1);
@@ -58,7 +55,6 @@
     height:100%; 
     z-index: -2;
 }
-
 body {
     box-sizing: border-box;
     max-height: 100%;
@@ -68,9 +64,16 @@ body {
     color: var(--couleur-texte);
     font-family: 'Titillium Web', sans-serif;
 }
-
+.trollmode  {
+    box-sizing: border-box;
+    max-height: 100%;
+    max-width: 100%;
+    background-color:fuchsia;
+    font-size: var(--texte);
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
 /* Jeu enfant tableaux et formes */
-
 .jeu {
     display:flex;
     margin:4px;
@@ -80,11 +83,8 @@ body {
     height: 500px; 
 	width: 600px; 
     z-index: 0;
-
 }
-
 .tableau {
-
     display:inline-block;
     margin:4px;
     font-size: var(--texte);
@@ -94,16 +94,13 @@ body {
     height: 500px; 
 	width: 600px; 
     z-index: 0;
-
 }
-
-/* Positionner les formes colorées */
+/* Positionner les formes colorées avec flexbox */
 
 .forme1 {
 
     clip-path: polygon(7% 2%, 5% 22%, 33% 24%);
     background-color: rgb(148, 24, 24);
-    display:flex;
     z-index: 1;
     height:400px;
     width:400px;
@@ -115,7 +112,6 @@ body {
 
     clip-path: polygon(50% 0%, 85% 47%, 53% 90%, 12% 44%);
     background-color: rgb(75, 216, 10);
-    display:flex;
     z-index: 1;
     height:100px;
     width:100px;
@@ -123,12 +119,10 @@ body {
     /* top:auto; */
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme3 {
 
     clip-path: inset(21% 20% 31% 10%);
     background-color: rgb(216, 213, 10);
-    display:flex;
     z-index: 1;
     height:150px;
     width:150px;
@@ -136,20 +130,17 @@ body {
     /* top:auto; */
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme4 {
 
     clip-path: polygon(25% 33%, 69% 34%, 80% 63%, 7% 85%);
     background-color: rgb(216, 10, 72);
-    display:flex;
     z-index: 1;
     height:150px;
     width:150px;
     position:fixed;
-    top:auto;
+    /* top:auto; */
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme5 {
 
     background-color: rgb(10, 209, 216);
@@ -159,10 +150,9 @@ body {
     width:100px;
     border-radius: 50px;
     position:fixed;
-    top:auto;
+    /* top:auto; */
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme6 {
 
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
@@ -176,7 +166,6 @@ body {
     border:solid 1px var(--couleur-texte1);
 
 }
-
 .forme7 {
 
     clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
@@ -189,7 +178,6 @@ body {
     top:auto;
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme8 {
 
     clip-path: polygon(50% 0%, 0% 100%, 100% 49%);
@@ -202,7 +190,6 @@ body {
     top:auto;
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme9 {
 
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
@@ -215,7 +202,6 @@ body {
     top:auto;
     border:solid 1px var(--couleur-texte1);
 }
-
 .forme10 {
 
     clip-path: ellipse(25% 40% at 50% 50%);
@@ -250,39 +236,35 @@ h3 {
     font-size: var(--titre3);
     color:var(--couleur-titre);
 }
-
 h4 {
     font-size: var(--texte2);
     color:var(--couleur-texte2);
     font-weight: bold;
     display: inline-block;
 }
-
 /* Partie main  */
-
 .main {
     max-width: 100%;
     margin-top: 50px;
     margin-bottom: 70px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .game {
     padding: 10px;
-    margin-top:20px;
     font-size: var(--texte2);
     text-align: center;
     color: var(--couleur-texte2);
-    border: solid 0.1px #161D8A;
+    border: solid 10px #4450f7;
     border-radius: 50%;
-    height: 200px; 
-	width: 200px; 
+    height: 240px; 
+	width: 240px; 
     background-color: #161D8A;
 }
 .rules {
     display:block;
     padding: 10px;
-    margin-bottom:20px;
+    margin-bottom:10px;
     font-size: var(--texte);
     text-align: center;
     color: var(--couleur-texte2);
@@ -314,13 +296,11 @@ a {
    z-index: 1;  
    padding-bottom:10px;
  }
-
 li {
     margin-right:10px;
     padding-right:1px;
 }
 /* -------------- PAGES JEU --------------- */
- 
  .introjeu {
     font-size: var(--texte2);
     text-align: left;
@@ -350,14 +330,31 @@ form {
     padding:2px;
     margin:2px;
 }
+.wordstroll {
+    background-color:fuchsia;
+    color : white;
+    font-weight: bolder;
+    border:none;
+    border-bottom : solid 1px #f7f8f8;
+    padding:2px;
+    margin:2px;
+}
 .button { 
     background-color: var(--couleur-nav);
     color : var(--couleur-texte1);
     font-weight: bold;
     padding: 5px;
     margin-top:5px;
-    cursor:pointer;
     border:none;
+}
+.buttontroll {
+    background-color:fuchsia;
+    color : white;
+    font-weight: bold;
+    padding: 5px;
+    margin-top:5px;
+    cursor:pointer;
+    border:solid 4px white;
 }
 /* Phrase exemple */
 .exemple {
@@ -366,6 +363,14 @@ form {
     font-weight: lighter;
     color: var(--couleur-texte1);
     margin-top:40px;
+}
+.exempletroll {
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    margin-top:40px;
+
 }
 /* Résultat */
 .reponseex {
@@ -383,9 +388,20 @@ form {
     border:none;
     border-bottom : solid 1px #4cced3;
     padding:10px;
-    max-width: 500px;
+    max-width: 100%;
+    text-align: center;
+}
+.reponsetroll {
+    margin-top:50px;
+    margin-bottom:50px;
+    color : white;
+    font-weight: lighter;
+    border:none;
+    border-bottom : solid 1px #4cced3;
+    padding:10px;
+    max-width: 100%;
     text-align: center;
 
 }
-/* Interrupteur */
+/* OPTION Interrupteur */
 
