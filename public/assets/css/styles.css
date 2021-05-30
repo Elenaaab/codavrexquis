@@ -74,8 +74,13 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 /* Jeu enfant tableaux et formes */
-.jeu {
+.espacejeu {
     display:flex;
+    justify-content: center;
+}
+
+.jeu {
+    display:inline-block;
     margin:4px;
     font-size: var(--texte);
     text-align: center;
@@ -83,6 +88,15 @@ body {
     height: 500px; 
 	width: 600px; 
     z-index: 0;
+}
+
+.espacejeu {
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    height: 500px; 
+	width: 600px; 
+
 }
 .tableau {
     display:inline-block;
@@ -99,14 +113,11 @@ body {
 
 .forme1 {
 
-    clip-path: polygon(7% 2%, 5% 22%, 33% 24%);
+    clip-path: polygon(7% 2%, 5% 82%, 73% 64%);
     background-color: rgb(148, 24, 24);
     z-index: 1;
-    height:400px;
-    width:400px;
-    position:fixed;
-    /* top:auto; */
-    border:solid 1px var(--couleur-texte1);
+    height:120px;
+    width:120px; 
 }
 .forme2 {
 
@@ -115,20 +126,15 @@ body {
     z-index: 1;
     height:100px;
     width:100px;
-    position:fixed;
-    /* top:auto; */
-    border:solid 1px var(--couleur-texte1);
 }
 .forme3 {
 
-    clip-path: inset(21% 20% 31% 10%);
-    background-color: rgb(216, 213, 10);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: rgb(113, 11, 196);
+    display:flex;
     z-index: 1;
-    height:150px;
-    width:150px;
-    position:fixed;
-    /* top:auto; */
-    border:solid 1px var(--couleur-texte1);
+    height:100px;
+    width:100px;
 }
 .forme4 {
 
@@ -137,9 +143,6 @@ body {
     z-index: 1;
     height:150px;
     width:150px;
-    position:fixed;
-    /* top:auto; */
-    border:solid 1px var(--couleur-texte1);
 }
 .forme5 {
 
@@ -149,22 +152,14 @@ body {
     height:100px;
     width:100px;
     border-radius: 50px;
-    position:fixed;
-    /* top:auto; */
-    border:solid 1px var(--couleur-texte1);
 }
 .forme6 {
 
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    background-color: rgb(197, 233, 235);
-    display:flex;
+    clip-path: inset(21% 20% 31% 15%);
+    background-color: rgb(2, 2, 0);
     z-index: 1;
     height:150px;
     width:150px;
-    position:fixed;
-    top:auto;
-    border:solid 1px var(--couleur-texte1);
-
 }
 .forme7 {
 
@@ -174,9 +169,6 @@ body {
     z-index: 1;
     height:150px;
     width:150px;
-    position:fixed;
-    top:auto;
-    border:solid 1px var(--couleur-texte1);
 }
 .forme8 {
 
@@ -186,21 +178,14 @@ body {
     z-index: 1;
     height:150px;
     width:150px;
-    position:fixed;
-    top:auto;
-    border:solid 1px var(--couleur-texte1);
 }
 .forme9 {
 
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    background-color: rgb(113, 11, 196);
-    display:flex;
+    clip-path: inset(21% 20% 31% 10%);
+    background-color: rgb(216, 213, 10);
     z-index: 1;
     height:150px;
     width:150px;
-    position:fixed;
-    top:auto;
-    border:solid 1px var(--couleur-texte1);
 }
 .forme10 {
 
@@ -210,10 +195,20 @@ body {
     z-index: 1;
     height:150px;
     width:150px;
-    position:fixed;
-    top:auto;
-    border:solid 1px var(--couleur-texte1);
 }
+.forme11 {
+
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: rgb(197, 233, 235);
+    display:flex;
+    z-index: 1;
+    height:150px;
+    width:150px;
+
+}
+
+
+
 /* --------------HOMEPAGE---------------------- */
 
 /* Titre */
@@ -241,6 +236,10 @@ h4 {
     color:var(--couleur-texte2);
     font-weight: bold;
     display: inline-block;
+}
+
+.tableaux {
+    display:inline;
 }
 /* Partie main  */
 .main {
@@ -301,6 +300,7 @@ li {
     padding-right:1px;
 }
 /* -------------- PAGES JEU --------------- */
+
  .introjeu {
     font-size: var(--texte2);
     text-align: left;
@@ -316,6 +316,7 @@ li {
      color:white;
 }
 /* Formulaire */
+
 form {
     display: flex;
     color:white;
@@ -357,6 +358,7 @@ form {
     border:solid 4px white;
 }
 /* Phrase exemple */
+
 .exemple {
     font-size: 30px;
     text-align: center;
@@ -373,6 +375,7 @@ form {
 
 }
 /* Résultat */
+
 .reponseex {
     margin-top:200px;
     margin-bottom:50px;

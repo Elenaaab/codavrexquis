@@ -29,34 +29,35 @@
                 la machine traduire votre dessin en c0davre exquis. <br> Il suffit de cliquer sur un dessin pour qu'il s'ajoute au tableau !</p>
             <a href="https://fr.wikipedia.org/wiki/Cadavre_exquis">More</a>
         </div>
-        <div class="row">
-            <h4 class="col-6 d-flex justify-content-center">Dessins</h4>
-            <h4 class="col-6 d-flex justify-content-center">Tableau</h4>
+        <div class="indications row">
+            <h4 class="tableaux col-6 d-flex justify-content-center">Dessins</h4>
+            <h4 class="tableaux col-6 d-flex justify-content-center">Tableau</h4>
             
             <div class="jeu col-6">
 
                 <!-- Lorsque l'utilisateur clique sur une forme, js la fait disparaitre de la div jeu et apparaitre dans la div tableau -->
-                <div class="row">
-                <div class="col-4 forme1"></div>
-                <div class="col-4 forme2"></div>
-                <div class="col-4 forme3"></div>
-                <div class="col-4 forme4"></div>
+                <div class="espacejeu row">
+                <div class="forme1"></div>
+                <div class="forme2"></div>
+                <div class="forme3"></div>
+                <div class="forme4"></div>
                 <div class="forme5"></div>
                 <div class="forme6"></div>
                 <div class="forme7"></div>
                 <div class="forme8"></div>
                 <div class="forme9"></div>
                 <div class="forme10"></div>
+                <div class="forme11"></div>
                 </div>
             </div>
             <div class="tableau col-6">
-                <div class="row">
-
+            <div class="espacejeu row">
             <div class="resultat1"></div>
             <div class="resultat2"></div>
             <div class="resultat3"></div>
             <div class="resultat4"></div>
             <div class="resultat5"></div>
+            <div class="d-none">cOdavre réponse</div>
             </div>
         </div>
         </div>
@@ -64,10 +65,10 @@
     <footer class="container d-flex justify-content-center">
         <nav class="row navigateur ">
             <ul class="d-flex align-items-center">
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/#">HOME</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_adulte.html">ECRIT</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_enfant.html">DESSIN</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./projet.html">PROJET</a></li>
+            <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/#">HOME</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_adulte.php">ECRIT</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_enfant.php">DESSIN</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./projet.php">PROJET</a></li>
             </ul>
         </nav>
     </footer>

@@ -49,10 +49,10 @@
       <footer class="container d-flex justify-content-center">
         <nav class="row ">
             <ul class="navigateur d-flex align-items-center">
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/#">HOME</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_adulte.html">ECRIT</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_enfant.html">DESSIN</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./projet.html">PROJET</a></li>
+            <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/#">HOME</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_adulte.php">ECRIT</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_enfant.php">DESSIN</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./projet.php">PROJET</a></li>
             </ul>
         </nav>
     </footer>

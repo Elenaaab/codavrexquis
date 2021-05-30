@@ -15,21 +15,23 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 ### 1.Construction du html
 
 * 4 pages à construire "en dur" : homepage avec histoire de l'invention du jeu et présentation des deux versions, une page par version du jeu et un descriptif du projet
-  
+* ==> OK
 * sur chaque page : barre de navigation en footer
-
+* ==> OK
 * sur chaque version de jeu : balises adéquates pour les éléments de jeu avec formulaires
+* ==> OK
   
 ### 2.Construction du CSS  
 
 * Bootstrap : placement des éléments sur la page
-
+* ==> OK
 * Importation des fonts choisies
-
+* ==> OK
 * Création des styles (couleurs et position) 
-
+* ==> OK
 * ! Création de l'espace de jeu des deux versions
-  
+* ==> OK
+
 ### 3.Construction du PHP
 
 * Dynamiser les formulaires sur deux versions de jeu adulte : cases à remplir changent d'une partie à l'autre (pour alimenter toutes les tables de la BDD)
@@ -38,7 +40,7 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
   
 * Installer les composers et le dossier vendor (altorouter)
   
-* Créer les controllers, views et models
+* Créer les controllers, views et models avec les namespaces
 
 * Dynamiser les pages (découper en partials, les liens de page)
   

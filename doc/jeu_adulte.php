@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +16,18 @@
     <link rel="stylesheet" href="../public/assets/css/styles.css">
     <title>Codavre Exquis Adulte</title>
 </head>
-<body class="trollmode">
+<body>
     <div class="deco3"></div>
     <main class="container">
         <h1>c0davre exquis</h1>
-        <h3>La version tr0ll</h3>
-        <p class="introjeu">Si tu es arrivé ici, bravo, c'est qu'un troll vit en toi ! Comme c'est trop tentant d'écrire n'importe quoi dans le formulaire, lâche-toi ici, écris ce que tu veux, la machine te répondra n'importe quoi elle aussi !<br>Ce tr0ll m0de est dédié à jh0n, a0dren et y0hann, une source de tr0ll-inspiration infinie.</p>
+        <h3>La version écrite</h3>
+        <p class="introjeu">Remplissez les champs libre en laissant courir votre imagination. Le sujet et le verbe doivent être à la 3e personne du singulier.</p>
         <div>
+
+         <!-- Intégrer un élément cliquable pour choisir la version avec un display none -->
+
+            <h4><a class="versioninactive" href="#">Versi0n 1</a></h4> 
+            <h4><a class="versionactive" href="#">Versi0n 2</a></h4>
 
         <!-- Formulaire 1 -->
         <!-- Champ à remplir dans action= est l'URL vers lequel la méthode GET va envoyer les données -->
@@ -30,30 +36,30 @@
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="sujet"> </label>
-                    <input class="wordstroll" type="text" name="sujet" placeholder="sujet" id="1" required>
+                    <input class="words" type="text" name="sujet" placeholder="sujet" id="1" required>
                 </div>
                 <!-- Mot choisi par l'user -->
                 <div class="col-2">
                     <label for="complement"> </label>
-                    <input class="wordstroll" type="text" name="adjectif" placeholder="adjectif" id="2" required>
+                    <input class="words" type="text" name="adjectif" placeholder="adjectif" id="2" required>
                 </div>
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="verbe"> </label>
-                    <input class="wordstroll" type="text" name="verbe" placeholder="verbe" id="3" required>
+                    <input class="words" type="text" name="verbe" placeholder="verbe" id="3" required>
                 </div>
                 <!-- Mot choisi par l'user -->
                 <div class="col-2">
                     <label for="complement"> </label>
-                    <input class="wordstroll" type="text" name="complement" placeholder="complément" id="4" required>
+                    <input class="words" type="text" name="complement" placeholder="complément" id="4" required>
                 </div>
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="adjectif"> </label>
-                    <input class="wordstroll" type="text" name="adjectif" placeholder="adjectif" id="5" required>
+                    <input class="words" type="text" name="adjectif" placeholder="adjectif" id="5" required>
                 </div>
                 <div class="col-2">
-                    <input class="buttontroll" type="submit" value="JOUER">
+                    <input class="button" type="submit" value="JOUER">
                 </div>
             </form>
             <div class="row reponse d-none">
@@ -69,56 +75,56 @@
                 <!-- Mot choisi par l'user -->
                 <div class="col-2">
                     <label for="sujet"> </label>
-                    <input class="wordstroll" type="text" name="sujet" placeholder="sujet" id="6" required>
+                    <input class="words" type="text" name="sujet" placeholder="sujet" id="6" required>
                 </div>
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="complement"> </label>
-                    <input class="wordstroll" type="text" name="adjectif" placeholder="adjectif" id="7" required>
+                    <input class="words" type="text" name="adjectif" placeholder="adjectif" id="7" required>
                 </div>
                 <!-- Mot choisi par l'user -->
                 <div class="col-2">
                     <label for="verbe"> </label>
-                    <input class="wordstroll" type="text" name="verbe" placeholder="verbe" id="8" required>
+                    <input class="words" type="text" name="verbe" placeholder="verbe" id="8" required>
                 </div>
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="complement"> </label>
-                    <input class="wordstroll" type="text" name="complement" placeholder="complément" id="9" required>
+                    <input class="words" type="text" name="complement" placeholder="complément" id="9" required>
                 </div>
                 <!-- Mot choisi par l'user -->
                 <div class="col-2">
                     <label for="adjectif"> </label>
-                    <input class="wordstroll" type="text" name="adjectif" placeholder="adjectif" id="10" required>
+                    <input class="words" type="text" name="adjectif" placeholder="adjectif" id="10" required>
                 </div>
                 <div class="col-2">
-                    <input class="buttontroll" type="submit" value="JOUER">
+                    <input class="button" type="submit" value="JOUER">
                 </div>
             </form>
         </div>
-        <p class="exempletroll">Un slip - pourri - harcèle - un steak - vicieux</p>
+        <p class="exemple">Un papillon - bleu - dévore - l'océan - profond</p>
         <div class="row reponseex">
             <p class="col-12">Votre c0davre exquis :</p>
-
             <!-- Affichage de la phrase foreach ou juste echo short tag ? -->
-
             <div class="d-none col-12 reponse">
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
+                <div class="reponse col-2"></div>
+                <div class="reponse col-2"></div>
+                <div class="reponse col-2"></div>
+                <div class="reponse col-2"></div>
+                <div class="reponse col-2"></div>
             </div>
-            <div class="col-12 reponse"></div>
-        </div>            
+            <div class="col-12 reponse"><?=$sujet; $adjectif; $verbe; $complement; $adjectif2; ?></div>
+        </div>  
+        <!-- Bouton pour accéder à la version troll grâce au bouton qui se déplace aléatoirement en js sur la page -->
+        <h4><a class="d-none versionactive" href="#">tr0ll m0de</a></h4>
     </main>
       <footer class="container d-flex justify-content-center">
         <nav class="row ">
             <ul class="navigateur d-flex align-items-center">
                 <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/#">HOME</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_adulte.html">ECRIT</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_enfant.html">DESSIN</a></li>
-                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./projet.html">PROJET</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_adulte.php">ECRIT</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./jeu_enfant.php">DESSIN</a></li>
+                <li class="col-3 "><a  href="http://localhost/trinity/LABO/Codavre-Exquis/doc/./projet.php">PROJET</a></li>
             </ul>
         </nav>
     </footer>    
