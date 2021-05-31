@@ -64,8 +64,8 @@
             </div>
             <div class="row"></div>
             <h3 class="col-12 d-flex justify-content-center">c0ntact</h3>
-            <h4 class="col-12 d-flex justify-content-center"><a class="versionactive" href="#"></a>Par mail</h4>
-            <h4 class="col-12 d-flex justify-content-center"><a class="versioninactive" href="#"></a>Github</h4>
+            <h4 class="col-12 d-flex justify-content-center"><a  href="mailto:ellelaby@gmail.com">Par mail</a></h4>
+            <h4 class="col-12 d-flex justify-content-center"><a  href="https://github.com/Elenaaab">Github</a></h4>
         </div>
     </main>
     <footer class="container d-flex justify-content-center">

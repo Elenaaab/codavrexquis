@@ -113,7 +113,7 @@
                 <div class="reponse col-2"></div>
                 <div class="reponse col-2"></div>
             </div>
-            <div class="col-12 reponse"><?=$sujet; $adjectif; $verbe; $complement; $adjectif2; ?></div>
+            <div class="col-12 reponse"></div>
         </div>  
         <!-- Bouton pour accéder à la version troll grâce au bouton qui se déplace aléatoirement en js sur la page -->
         <h4><a class="d-none versionactive" href="#">tr0ll m0de</a></h4>
