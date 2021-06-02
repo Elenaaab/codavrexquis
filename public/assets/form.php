@@ -5,8 +5,6 @@
 
 // 1. ===============================Récupérer les réponses utilisateur : =============================================
 
-    require_once __DIR__ . '/assets/functions.php';
-    require_once __DIR__ . '/app/db.php';
 
                      // On initialise les variables :
 

@@ -8,13 +8,13 @@ class CoreController {
         
     protected function show( $viewName, $viewVars = [] ) 
     {
-        $baseUrl = dirname($_SERVER['BASE_URI']);
 
         global $router;
+        $baseUrl = $_SERVER['BASE_URI'];
 
-        require_once __DIR__.'/../views/partials/_header.tpl.php';
-        require_once __DIR__.'/../views/'.$viewName.'.tpl.php';
-        require_once __DIR__.'/../views/partials/_footer.tpl.php';
+        require_once __DIR__.'/public/app/Views/partials/_header.tpl.php';
+        require_once __DIR__.'/public/app/Views/'.$viewName.'.tpl.php';
+        require_once __DIR__.'/public/app/Views/partials/_footer.tpl.php';
 
     }
 
