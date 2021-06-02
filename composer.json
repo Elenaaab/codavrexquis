@@ -1,0 +1,13 @@
+{
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "symfony/var-dumper": "^5.3"
+    }
+
+},
+"autoload": {
+    "psr-4" : {
+        "app\\" : "app/"
+    }
+}
+}
