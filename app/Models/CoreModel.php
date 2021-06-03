@@ -12,13 +12,6 @@ class CoreModel {
     protected $type;
 
 
-
-
-
-
-
-    
-
     /**
      * Get the value of id
      */ 

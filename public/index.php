@@ -3,44 +3,42 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 $router = new AltoRouter();
 $router->setBasePath( $_SERVER['BASE_URI'] . "/public" );
-// dump($router);
 
 // Fabrication des routes :
 $router->map(
     'GET',
-    '/public/home',
+    '/',
     [
-        'controller' => 'MainController',
+        'controller' => 'app\Controllers\MainController',
         'method' => 'home'
     ],
     'home'
   );
-  
   $router->map(
     'GET',
-    '/public/jeu_adulte',
+    '/jeuadulte',
     [
-        'controller' => 'GameController',
+        'controller' => 'app\Controllers\GameController',
         'method' => 'game'
     ],
-    'jeu_adulte'
-  );
-  
-  $router->map(
-    'GET',
-    '/public/jeu_enfant',
-    [
-        'controller' => 'GameController',
-        'method' => 'game'
-    ],
-    'jeu_enfant'
+    'jeuadulte'
   );
 
   $router->map(
     'GET',
-    '/public/troll',
+    '/jeuenfant',
     [
-        'controller' => 'GameController',
+        'controller' => 'app\Controllers\GameController',
+        'method' => 'game'
+    ],
+    'jeuenfant'
+  );
+
+  $router->map(
+    'GET',
+    '/troll',
+    [
+        'controller' => 'app\Controllers\GameController',
         'method' => 'game'
     ],
     'troll'
@@ -48,19 +46,21 @@ $router->map(
 
   $router->map(
     'GET',
-    '/public/projet',
+    '/projet',
     [
-        'controller' => 'MainController',
+        'controller' => 'app\Controllers\MainController',
         'method' => 'info'
     ],
     'projet'
   );
 
+  // On pourrait remplacer /projet par :  '/pokemon/[i:id] ou /[a:action]' ça correspond à une clé de tableau
+
+
 // Vérification des routes : 
 
   $routeInfo = $router->match();
   
-
   if($routeInfo === false) 
   { 
         http_response_code( 404 );
@@ -70,9 +70,9 @@ $router->map(
    } else {      
 
   $destination = $routeInfo['target'];
-  $controllerName = "app\\Controllers\\" . $destination['controller'];
+  $controllerName = $destination['controller'];
   $methodName = $destination['method'];
-  $controller = new $controllerName();
+  $controller = new $controllerName($router);
   $controller->$methodName();
 
   };

@@ -1,3 +1,6 @@
+
+# Fichier de configuration du serveur Web Apache
+
 RewriteEngine On
 
 # dynamically setup base URI
@@ -8,4 +11,15 @@ RewriteRule ^(.*) - [E=BASE_URI:%1]
 # and give the relative URL in "_url" GET param
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+RewriteRule ^(.*)$ index.php?page=/$1 [QSA,L]
+
+# <IfModule mod_rewrite.c>
+#   RewriteEngine on
+#   RewriteRule ^index\.html$ ./index.php?p=home&html [L,NC]
+#   RewriteRule ^(.+)-(.+)-(.+)-(.+)-(.+)-(.+)\.html$ ./index.php?page=$1&a=$2&b=$3&c=$4&d=$5&e=$6&html [L]
+#   RewriteRule ^(.+)-(.+)-(.+)-(.+)-(.+)\.html$ ./index.php?page=$1&a=$2&b=$3&c=$4&d=$5&html [L]
+#   RewriteRule ^(.+)-(.+)-(.+)-(.+)\.html$ ./index.php?page=$1&a=$2&b=$3&c=$4&html [L]
+#   RewriteRule ^(.+)-(.+)-(.+)\.html$ ./index.php?page=$1&a=$2&b=$3&html [L]
+#   RewriteRule ^(.+)-(.+)\.html$ ./index.php?page=$1&a=$2&html [L]
+#   RewriteRule ^(.+)\.html$ ./index.php?page=$1&html [L]
+# </IfModule>

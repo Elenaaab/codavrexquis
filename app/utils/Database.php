@@ -1,5 +1,7 @@
 <?php
 
+// Mettre un namespace à tous les fichiers sauf les views dans le dossier APP : 
+
     namespace app\utils;    
 
     use \PDO;

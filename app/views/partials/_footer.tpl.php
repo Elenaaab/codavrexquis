@@ -2,8 +2,8 @@
         <nav class="row ">
             <ul class="navigateur d-flex align-items-center">
                 <li class="col-3 "><a  href="<?= $router->generate('home')?>">HOME</a></li>
-                <li class="col-3 "><a  href="<?= $router->generate('jeu_adulte')?>">ECRIT</a></li>
-                <li class="col-3 "><a  href="<?= $router->generate('jeu_enfant')?>">DESSIN</a></li>
+                <li class="col-3 "><a  href="<?= $router->generate('jeuadulte')?>">ECRIT</a></li>
+                <li class="col-3 "><a  href="<?= $router->generate('jeuenfant')?>">DESSIN</a></li>
                 <li class="col-3 "><a  href="<?= $router->generate('projet')?>">PROJET</a></li>
             </ul>
         </nav>

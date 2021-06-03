@@ -87,7 +87,7 @@
         <p class="exemple">Un papillon - bleu - dévore - l'océan - profond</p>
         <div class="row reponseex">
             <p class="col-12">Votre c0davre exquis :</p>
-            <!-- Affichage de la phrase foreach ou juste echo short tag ? -->
+            <!-- Affichage de la phrase foreach + short tag  -->
             <div class="d-none col-12 reponse">
                 <div class="reponse col-2"></div>
                 <div class="reponse col-2"></div>
