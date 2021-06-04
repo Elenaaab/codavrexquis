@@ -29,7 +29,7 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * ==> OK
 * Création des styles (couleurs et position) 
 * ==> OK
-* ! Création de l'espace de jeu des deux versions
+* Création de l'espace de jeu des deux versions
 * ==> OK
 
 ### 3.Construction du PHP
@@ -39,13 +39,14 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Dessiner le mocodo et créer la base de données
 * ==> OK
 * Installer les composers et le dossier vendor (altorouter)
-  ==> OK
+* ==> OK
 * Créer les controllers, views et models avec les namespaces
-
+* =>OK
 * Dynamiser les pages (découper en partials, les liens de page)
-  
-* Dynamiser la nav avec la page active
-  
+* =>OK
+* MVC : suite avec altodispacher + subdivision des templates (layout) + ajouter une MVC error
+* =>EN COURS
+
 ### 4.Construction du js
 
 * Sur la homepage, dynamiser l'apparition et disparition des règles du jeu
@@ -73,3 +74,5 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Enregistrer plusieurs parties d'affilée sur la page pour avoir plusieurs lignes en réponse
   
 * Proposer l'envoi par email de ses cOdavres
+  
+* Dynamiser la nav avec la page active

@@ -4,34 +4,76 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // Front controller -> Point d'entrée unique de l'application
 $router = new AltoRouter();
-$router->setBasePath($_SERVER['BASE_URI'] . "/public");
-dump($_SERVER['BASE_URI']);
 
-$router->map( "GET", "/",                  "MainController@home",          "main.home"); // Route accueil
-$router->map( "GET", "/jeuadulte",         "GameController@gameOne",       "game.gameOne"); // Route mention légales
-$router->map( "GET", "/jeuenfant",         "GameController@gameTwo",       "game.gameTwo"); // Route mention légales
-$router->map( "GET", "/troll",             "GameController@troll",         "game.troll"); // Route mention légales
-$router->map( "GET", "/projet",            "MainController@info",          "main.info"); // Route mention légales
+if (array_key_exists('BASE_URI', $_SERVER)) {
+    // Alors on définit le basePath d'AltoRouter
+    $router->setBasePath($_SERVER['BASE_URI']);
+    // ainsi, nos routes correspondront à l'URL, après la suite de sous-répertoire
+}
+// sinon
+else {
+    // On donne une valeur par défaut à $_SERVER['BASE_URI'] car c'est utilisé dans le CoreController
+    $_SERVER['BASE_URI'] = '/';
+}
 
+// $router->map( "GET", "/",                  "MainController@home",          "main.home"); // Route accueil
+// $router->map( "GET", "/jeuadulte",         "GameController@gameOne",       "game.gameOne"); // Route mention légales
+// $router->map( "GET", "/jeuenfant",         "GameController@gameTwo",       "game.gameTwo"); // Route mention légales
+// $router->map( "GET", "/troll",             "GameController@gameThree",     "game.troll"); // Route mention légales
+// $router->map( "GET", "/projet",            "MainController@info",          "main.info"); // Route mention légales
 
-$routeInfo = $router->match();
+$router->map(
+    'GET',
+    '/',
+    [
+        'method' => 'home',
+        'controller' => '\App\Controllers\MainController'
+    ],
+    'main.home'
+);
 
-    // Gestion des 404
-    if( $routeInfo === false ) :
-        // On aurait aussi pu gérer ça dans une méthodé
-        // error de MainController, voire faire un ErrorController
-        http_response_code( 404 );
-        echo "Page non trouvée (404 Not Found)";
-        exit(); // On arrêt ele script ici, on essaye pas de dispatch
-    endif;
+$router->map(
+    'GET',
+    '/jeuadulte',
+    [
+        'method' => 'gameOne',
+        'controller' => '\App\Controllers\GameController'
+    ],
+    'game.gameOne'
+);
 
-    $routeInfoArray = explode( "@", $routeInfo['target'] );
-  
-    $controllerName = "app\\Controllers\\".$routeInfoArray[0]; // Nom du contrôleur
-    $methodName     = $routeInfoArray[1]; // Nom de la méthode
+$router->map(
+    'GET',
+    '/jeuenfant',
+    [
+        'method' => 'gameTwo',
+        'controller' => '\App\Controllers\GameController'
+    ],
+    'game.gameTwo'
+);
 
- 
-    $controller = new $controllerName();
-    
+$router->map(
+    'GET',
+    '/troll',
+    [
+        'method' => 'gameThree',
+        'controller' => '\App\Controllers\GameController'
+    ],
+    'game.troll'
+);
 
-    $controller->$methodName( $routeInfo['params'] );
+$router->map(
+    'GET',
+    '/projet',
+    [
+        'method' => 'info',
+        'controller' => '\App\Controllers\MainController'
+    ],
+    'main.info'
+);
+
+$match = $router->match();
+
+$dispatcher = new Dispatcher($match, '\App\Controllers\ErrorController::err404');
+$dispatcher->dispatch();
+

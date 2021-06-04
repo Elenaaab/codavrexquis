@@ -1,13 +1,4 @@
-<footer class="container d-flex justify-content-center">
-        <nav class="row ">
-            <ul class="navigateur d-flex align-items-center">
-                <li class="col-3 "><a  href="<?= $router->generate('main.home')?>">HOME</a></li>
-                <li class="col-3 "><a  href="<?= $router->generate('game.gameOne')?>">ECRIT</a></li>
-                <li class="col-3 "><a  href="<?= $router->generate('game.gameTwo')?>">DESSIN</a></li>
-                <li class="col-3 "><a  href="<?= $router->generate('main.info')?>">PROJET</a></li>
-            </ul>
-        </nav>
-    </footer>    
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>

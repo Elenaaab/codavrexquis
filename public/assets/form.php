@@ -25,6 +25,40 @@
                     ) {
                     // je récupère les info provenant du formulaire si les valeurs sont bien une chaine de caractères :
 
+                        // TODO ajouter cette étape : 
+
+                        //  la fonction filter_input de PHP peut être très utile pour récupérer simplement les données transportées en GET ou en POST.
+
+                        // Exemple avec une donnée name envoyée en GET
+                        
+                        // <?php
+                        // // [...]
+                        
+                        // $name = filter_input(INPUT_GET, 'name');
+                        // Exemple avec une donnée name envoyée en POST
+                        
+                        // <?php
+                        // // [...]
+                        
+                        // $name = filter_input(INPUT_POST, 'name');
+
+                        // public function create (){
+
+                        //     dump($_POST);
+                       
+                        //    $name = filter_input(INPUT_POST, 'name');
+                        //    $subtitle = filter_input(INPUT_POST, 'subtitle');
+                        //    $picture = filter_input(INPUT_POST, 'picture');
+                        //    $home_order = filter_input(INPUT_POST, 'home_order');
+                   
+                        //    $categoryinsertModel = new Category ();
+                        //    $categoryinsertModel->setName($name);
+                        //    $categoryinsertModel->setSubtitle($subtitle);
+                        //    $categoryinsertModel->setPicture($picture);
+                        //    $categoryinsertModel->setHomeOrder($home_order);
+                        //    $categoryinsert = $categoryinsertModel->insert();
+
+
                         var_dump($_GET);
 
                         $sujet = $_GET["sujet"];

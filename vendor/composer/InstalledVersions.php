@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '8a78032e604af3bcf1a6c1b3b5999d22e4e37421',
+    'reference' => 'e43dcd2a2b8e62d7a8154f71bd758094d47716d8',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '8a78032e604af3bcf1a6c1b3b5999d22e4e37421',
+      'reference' => 'e43dcd2a2b8e62d7a8154f71bd758094d47716d8',
     ),
     'altorouter/altorouter' => 
     array (
@@ -52,6 +52,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '127f6e96998708a31ef32252985bea82e3b03888',
+    ),
+    'benoclock/alto-dispatcher' => 
+    array (
+      'pretty_version' => '1.3',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fe7cbb66323a3d5025cc51941b1bdb6cc67be40c',
     ),
     'symfony/polyfill-mbstring' => 
     array (
