@@ -1,5 +1,4 @@
 <?php
-
 namespace app\Controllers;
 
 class MainController extends CoreController

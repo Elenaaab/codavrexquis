@@ -1,3 +1,4 @@
+<?php dump("Didier de la compta")?>
 <body>
     <div class="deco3"></div>
     <main class="container">

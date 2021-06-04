@@ -1,4 +1,5 @@
 <?php
+namespace app\Controllers;
 
 use app\Controllers\CoreController;
 use app\Models\Codavre;

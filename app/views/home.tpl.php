@@ -6,12 +6,12 @@
             <div class="game col-4">
                 <h3 class="d-flex justify-content-center">c0davre <br> écrit</h3>
                 <p class="d-flex justify-content-center">Mêlez vos mots à ceux de la machine !</p>
-                <a href="<?= $router->generate('jeuadulte')?>">JOUER</a>
+                <a href="<?= $router->generate('game.gameOne')?>">JOUER</a>
             </div>
             <div class="game col-4">
                 <h3 class="d-flex justify-content-center">c0davre <br> dessiné</h3>
                 <p class="d-flex justify-content-center">La machine transforme vos dessins en poésie !</p>
-                <a href="<?=$router->generate('jeuenfant')?>">JOUER</a>
+                <a href="<?=$router->generate('game.gameTwo')?>">JOUER</a>
             </div>
         </div>
         <header class="row">

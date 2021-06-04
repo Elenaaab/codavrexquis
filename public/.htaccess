@@ -1,4 +1,3 @@
-
 # Fichier de configuration du serveur Web Apache
 
 RewriteEngine On
@@ -11,7 +10,9 @@ RewriteRule ^(.*) - [E=BASE_URI:%1]
 # and give the relative URL in "_url" GET param
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?page=/$1 [QSA,L]
+# rediriger TOUTES les requêtes qui mène au dossier dans lequel se trouve le .htaccess vers index.php
+# appeler /products => index.php?_url=/products
+RewriteRule ^(.*)$ index.php [QSA,L]
 
 # <IfModule mod_rewrite.c>
 #   RewriteEngine on
