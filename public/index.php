@@ -27,7 +27,7 @@ $router->map(
     '/',
     [
         'method' => 'home',
-        'controller' => '\App\Controllers\MainController'
+        'controller' => '\app\Controllers\MainController'
     ],
     'main.home'
 );
@@ -37,7 +37,7 @@ $router->map(
     '/jeuadulte',
     [
         'method' => 'gameOne',
-        'controller' => '\App\Controllers\GameController'
+        'controller' => '\app\Controllers\GameController'
     ],
     'game.gameOne'
 );
@@ -47,7 +47,7 @@ $router->map(
     '/jeuenfant',
     [
         'method' => 'gameTwo',
-        'controller' => '\App\Controllers\GameController'
+        'controller' => '\app\Controllers\GameController'
     ],
     'game.gameTwo'
 );
@@ -57,7 +57,7 @@ $router->map(
     '/troll',
     [
         'method' => 'gameThree',
-        'controller' => '\App\Controllers\GameController'
+        'controller' => '\app\Controllers\GameController'
     ],
     'game.troll'
 );
@@ -67,13 +67,16 @@ $router->map(
     '/projet',
     [
         'method' => 'info',
-        'controller' => '\App\Controllers\MainController'
+        'controller' => '\app\Controllers\MainController'
     ],
     'main.info'
 );
 
+// Altodispatcher : 
+
 $match = $router->match();
 
-$dispatcher = new Dispatcher($match, '\App\Controllers\ErrorController::err404');
+$dispatcher = new Dispatcher($match, '\app\Controllers\ErrorController::err404');
 $dispatcher->dispatch();
+
 

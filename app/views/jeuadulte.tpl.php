@@ -14,7 +14,7 @@
         <!-- Formulaire 1 -->
         <!-- Champ à remplir dans action= est l'URL vers lequel la méthode GET va envoyer les données -->
 
-            <form class="row" action="./form.php" method="get">
+            <form class="row" action="#" method="get">
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="sujet"> </label>
@@ -53,7 +53,7 @@
         <!-- Champ à remplir dans action= est l'URL vers lequel la méthode GET va envoyer les données -->
 
         <div class="d-none">
-            <form class="row" action="./form.php" method="get">
+            <form class="row" action="#" method="get">
                 <!-- Mot choisi par l'user -->
                 <div class="col-2">
                     <label for="sujet"> </label>

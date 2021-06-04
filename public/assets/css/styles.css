@@ -207,8 +207,6 @@ body {
 
 }
 
-
-
 /* --------------HOMEPAGE---------------------- */
 
 /* Titre */
@@ -294,6 +292,7 @@ a {
  .navigateur {
    z-index: 1;  
    padding-bottom:10px;
+   position: fixed;
  }
 li {
     margin-right:10px;

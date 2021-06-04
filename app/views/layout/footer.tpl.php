@@ -1,5 +1,5 @@
 <footer class="container d-flex justify-content-center">
-        <nav class="row ">
+        <nav class="row">
             <ul class="navigateur d-flex align-items-center">
                 <li class="col-3 "><a  href="<?= $router->generate('main.home')?>">HOME</a></li>
                 <li class="col-3 "><a  href="<?= $router->generate('game.gameOne')?>">ECRIT</a></li>

@@ -45,7 +45,7 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Dynamiser les pages (découper en partials, les liens de page)
 * =>OK
 * MVC : suite avec altodispacher + subdivision des templates (layout) + ajouter une MVC error
-* =>EN COURS
+* =>OK
 
 ### 4.Construction du js
 

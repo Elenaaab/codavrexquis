@@ -25,3 +25,5 @@ class Codavre extends CoreModel {
 
 
 // Il va aussi falloir construire une méthode pour envoyer les mots dans la BDD (voir form.php) : 
+
+    // Faire une fonction insert qui sera appelée plusieurs fois depuis le controlleur selon les types de mots
