@@ -35,7 +35,7 @@
     top:auto;
     width: 100%; 
     height:100%; 
-    z-index: -1;
+    z-index: -3;
 }
 .deco4 {
     clip-path: polygon(0 100%, 35% 0 ,0 0 );
@@ -228,7 +228,6 @@ h5 {
     color: var(--couleur-texte2);
     font-weight: bolder;
 }
-
 .tableaux {
     display:inline;
 }
@@ -264,6 +263,11 @@ blockquote {
     text-align:center;
 }
 /* Liens */
+
+nav {
+    position:fixed;
+    z-index:0;
+}
  nav a {
     text-decoration: none;
     text-transform: uppercase;
@@ -364,21 +368,19 @@ form {
 /* Résultat */
 
 .reponseex {
-    margin-top:200px;
-    /* margin-bottom:50px; */
+    margin-top:150px;
     font-size: 50px;
     text-align: center;
     color: var(--couleur-nav);
 }
 .reponse {
     margin-top:50px;
-    /* margin-bottom:50px; */
     color : var(--couleur-texte1);
     font-weight: lighter;
     border:none;
     border-bottom : solid 1px #4cced3;
     padding:10px;
-    max-width: 100%;
+    max-width: 80%;
     text-align: center;
 }
 .reponsetroll {
@@ -391,7 +393,6 @@ form {
     padding:10px;
     max-width: 100%;
     text-align: center;
-
 }
 /* OPTION Interrupteur */
 
