@@ -112,102 +112,88 @@ body {
 /* Positionner les formes colorées avec flexbox */
 
 .forme1 {
-
     clip-path: polygon(7% 2%, 5% 82%, 73% 64%);
-    background-color: rgb(148, 24, 24);
     z-index: 1;
-    height:120px;
-    width:120px; 
+    height:130px;
+    width:130px; 
+    background: radial-gradient(#ce1543, #161D8A );
 }
 .forme2 {
-
     clip-path: polygon(50% 0%, 85% 47%, 53% 90%, 12% 44%);
-    background-color: rgb(75, 216, 10);
     z-index: 1;
-    height:100px;
-    width:100px;
+    height:120px;
+    width:120px;
+    background: radial-gradient(#09db1b, #e77d04 );
 }
 .forme3 {
-
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    background-color: rgb(113, 11, 196);
     display:flex;
     z-index: 1;
     height:100px;
     width:100px;
+    background: radial-gradient(#60068a, #c669e2 );
 }
 .forme4 {
-
     clip-path: polygon(25% 33%, 69% 34%, 80% 63%, 7% 85%);
-    background-color: rgb(216, 10, 72);
     z-index: 1;
     height:150px;
     width:150px;
+    background: radial-gradient(#ec0e19, #6b5ba5 );
 }
 .forme5 {
-
-    background-color: rgb(10, 209, 216);
     display:flex;
     z-index: 1;
     height:100px;
     width:100px;
     border-radius: 50px;
+    background: radial-gradient(#02f0f8, #045c6b );
 }
 .forme6 {
-
     clip-path: inset(21% 20% 31% 15%);
-    background-color: rgb(2, 2, 0);
     z-index: 1;
     height:150px;
     width:150px;
+    background: radial-gradient(#000505, #22012c );
 }
 .forme7 {
-
     clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-    background-color: rgb(196, 94, 11);
     display:flex;
     z-index: 1;
     height:150px;
     width:150px;
+    background: radial-gradient(#e78607, #ce1d06 );
 }
 .forme8 {
-
     clip-path: polygon(50% 0%, 0% 100%, 100% 49%);
-    background-color: rgb(11, 196, 88);
     display:flex;
     z-index: 1;
     height:150px;
     width:150px;
+    background: radial-gradient(#20c043, #226146 );
 }
 .forme9 {
-
     clip-path: inset(21% 20% 31% 10%);
-    background-color: rgb(216, 213, 10);
     z-index: 1;
     height:150px;
     width:150px;
+    background: radial-gradient(#e9da05, #ddb691 );
 }
 .forme10 {
-
     clip-path: ellipse(25% 40% at 50% 50%);
-    background-color: rgb(238, 54, 8);
     display:flex;
     z-index: 1;
     height:150px;
     width:150px;
+    background: radial-gradient(#f80202, #a17fd8 );
 }
 .forme11 {
-
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    background-color: rgb(197, 233, 235);
     display:flex;
     z-index: 1;
     height:150px;
     width:150px;
-
+    background: radial-gradient(#02f0f8, #c669e2 );
 }
-
-
 
 /* --------------HOMEPAGE---------------------- */
 
@@ -236,6 +222,11 @@ h4 {
     color:var(--couleur-texte2);
     font-weight: bold;
     display: inline-block;
+}
+h5 {
+    font-size: var(--texte);
+    color: var(--couleur-texte2);
+    font-weight: bolder;
 }
 
 .tableaux {
@@ -291,10 +282,6 @@ a {
     color: var(--couleur-titre);
     font-size: 15px;
 }
- .navigateur {
-   z-index: 1;  
-   padding-bottom:10px;
- }
 li {
     margin-right:10px;
     padding-right:1px;
@@ -378,14 +365,14 @@ form {
 
 .reponseex {
     margin-top:200px;
-    margin-bottom:50px;
+    /* margin-bottom:50px; */
     font-size: 50px;
     text-align: center;
     color: var(--couleur-nav);
 }
 .reponse {
     margin-top:50px;
-    margin-bottom:50px;
+    /* margin-bottom:50px; */
     color : var(--couleur-texte1);
     font-weight: lighter;
     border:none;
