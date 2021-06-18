@@ -6,9 +6,14 @@ use PDO;
 
 class Troll extends CoreModel {
 
-    // ce sera les mêmes méthodes que codavre mais avec la BDD spécifique de troll
 
-// On commence par récupérer 5 mots au hasard, il va ensuite falloir les afficher dans la view : 
+            // Methodes héritées du coremodel
+
+            public function find() {}
+            public function insert(){}
+
+
+            // On commence par récupérer 5 mots au hasard, il va ensuite falloir les afficher dans la view : 
 
     public function findTrollWords()
     {

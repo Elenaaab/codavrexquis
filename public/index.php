@@ -12,6 +12,7 @@ if (array_key_exists('BASE_URI', $_SERVER)) {
     $_SERVER['BASE_URI'] = '/';
 }
 
+// Route qui affiche la page d'accueil :
 $router->map(
     'GET',
     '/',
@@ -21,7 +22,7 @@ $router->map(
     ],
     'main.home'
 );
-
+// Route qui affiche le jeu 1 adulte :
 $router->map(
     'GET',
     '/jeuadulte',
@@ -31,7 +32,17 @@ $router->map(
     ],
     'game.gameOne'
 );
-
+// Route qui récupère les infos du jeu 1 :
+$router->map(
+    'POST',
+    '/jeuadulte',
+    [
+        'method' => 'create',
+        'controller' => '\app\Controllers\GameController'
+    ],
+    'game.create'
+);
+// Route qui affiche le jeu 2 enfant :
 $router->map(
     'GET',
     '/jeuenfant',
@@ -41,7 +52,17 @@ $router->map(
     ],
     'game.gameTwo'
 );
-
+// Route qui récupère les infos du jeu 2 :
+$router->map(
+    'POST',
+    '/jeuenfant',
+    [
+        'method' => 'create',
+        'controller' => '\app\Controllers\GameController'
+    ],
+    'game.create'
+);
+// Route qui affiche le jeu troll :
 $router->map(
     'GET',
     '/troll',
@@ -51,7 +72,17 @@ $router->map(
     ],
     'game.troll'
 );
-
+// Route qui récupère les infos du jeu 3 :
+$router->map(
+    'POST',
+    '/troll',
+    [
+        'method' => 'create',
+        'controller' => '\app\Controllers\GameController'
+    ],
+    'game.create'
+);
+// Route qui affiche la page info :
 $router->map(
     'GET',
     '/projet',

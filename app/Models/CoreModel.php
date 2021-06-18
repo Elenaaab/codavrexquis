@@ -2,14 +2,16 @@
 
 namespace app\Models;
 
-use \app\utils\Database;
-use \PDO;
-
-class CoreModel {
+abstract class CoreModel {
 
     protected $id;
     protected $word;
     protected $type;
+
+    // Methode du coremodel
+
+    protected abstract function find();
+    protected abstract function insert();
 
 
     /**

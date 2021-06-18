@@ -6,10 +6,16 @@ use PDO;
 
 class Codavre extends CoreModel {
 
+        // Methodes héritées du coremodel
+
+        public function find() {}
+        public function insert(){}
+    
+
 
 // En guise de test, on utilise une méthode simple pour récupérer 5 mots : 
 
-    public function findWords()
+    public static function findWords()
     {
         $sql = "SELECT `word` FROM `codavre` LIMIT 5";
 
