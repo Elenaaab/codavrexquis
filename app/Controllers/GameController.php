@@ -7,38 +7,55 @@ use app\Models\Troll;
 
 class GameController extends CoreController {
 
+    public function createGame() {
+
+   if(!empty($_POST) 
+        && !empty($_POST["sujet"]) 
+        && !empty($_POST["adjectif"])
+        && !empty($_POST["verbe"]) 
+        && !empty($_POST["complement"])
+        && !empty($_POST["adjectif"]))
+
+         {
+
+            $sujet = filter_input(INPUT_POST, 'sujet');
+            $adjectif = filter_input(INPUT_POST, 'adjectif');
+            $verbe = filter_input(INPUT_POST, 'verbe');
+            $complement = filter_input(INPUT_POST, 'complement');
+            $adjectif2 = filter_input(INPUT_POST, 'adjectif');
+
+            $sujet = strtolower($sujet);
+            $adjectif = strtolower($adjectif);
+            $verbe = strtolower($verbe);
+            $complement = strtolower($complement);
+            $adjectif2 = strtolower($adjectif2);
+
+$game = new Codavre();
+
+$game->setWord($sujet);
+$game->setWord($adjectif);
+$game->setWord($verbe);
+$game->setWord($complement);
+$game->setWord($adjectif2);
+
+$game->insert();
+
+    } else {
+
+        http_response_code(404);
+        $this->show('error/err404');
+        exit();
+    }
 
 
-// Méthode GET et POST : la GET affiche la réponse, la POST envoie les valeurs du form en BDD -create)
+public function createTroll() {
 
 
-// $email = isset($_POST['email']) ? $_POST['email'] : '';
-// $name = isset($_POST['name']) ? $_POST['name'] : '';
-// $password= isset($_POST['password']) ? $_POST['password'] : '';
-// $role = isset($_POST['role']) ? intval($_POST['role']) : 0;
-
-// $user = new User();
-
-// $user->setEmail($email);
-// $user->setName($name);
-// $user->setPassword($password);
-// $user->setRole($role);
-
-// if ($user->insert()) {  --> la méthode insert est codée dans le model
-//     global $router;
-//     header('Location: '. $router->generate('user-list'));
-// }
-// }
-
-
+}
 
 // Il existe 3 jeux dont 2 sont identiques (à l'exception du model utilisé) et 2 utilisent le même model mais sont l'exact inverse l'un de l'autre : 
 
 // Ils répondent tous les 3 à la même structure : 
-
-// * 1 * :
-// * 2 * :
-// * 3 * :
 
 
 public function gameOne()
