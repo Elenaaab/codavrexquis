@@ -78,3 +78,5 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Dynamiser la nav avec la page active
   
 * A chaque fois qu'on rafraichit le navigateur, les formes changent de place dans le tableau du jeu enfant
+
+* Connexion à une API via ajax pour alimenter le jeu (API vocabulaire)

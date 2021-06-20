@@ -6,11 +6,10 @@ abstract class CoreModel {
 
     protected $id;
     protected $word;
-    protected $type;
 
-    // Methode du coremodel
+    // Methode du coremodel qui s'applique aux models sur les 2 ddb
 
-    protected abstract function find();
+    protected abstract static function find();
     protected abstract function insert();
 
 
@@ -28,14 +27,6 @@ abstract class CoreModel {
     public function getWord()
     {
         return $this->word;
-    }
-
-    /**
-     * Get the value of type
-     */ 
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**
@@ -62,15 +53,4 @@ abstract class CoreModel {
         return $this;
     }
 
-    /**
-     * Set the value of type
-     *
-     * @return  self
-     */ 
-    public function setType($type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
 }

@@ -22,10 +22,22 @@ $router->map(
     ],
     'main.home'
 );
+
+// Route qui affiche une 404 :
+$router->map(
+    'GET',
+    '/oups',
+    [
+        'method' => 'err404',
+        'controller' => '\app\Controllers\ErrorController'
+    ],
+    'error.err404'
+);
+
 // Route qui affiche le jeu 1 adulte :
 $router->map(
     'GET',
-    '/jeuadulte',
+    '/jeuadulte1',
     [
         'method' => 'gameOne',
         'controller' => '\app\Controllers\GameController'
@@ -35,12 +47,32 @@ $router->map(
 // Route qui récupère les infos du jeu 1 :
 $router->map(
     'POST',
-    '/jeuadulte',
+    '/jeuadulte1',
     [
         'method' => 'createGame',
         'controller' => '\app\Controllers\GameController'
     ],
     'game.createGame'
+);
+// Route qui affiche le jeu 2 adulte :
+$router->map(
+    'GET',
+    '/jeuadulte2',
+    [
+        'method' => 'gameOneTwo',
+        'controller' => '\app\Controllers\GameController'
+    ],
+    'game.gameOneTwo'
+);
+// Route qui récupère les infos du jeu 2 :
+$router->map(
+    'POST',
+    '/jeuadulte2',
+    [
+        'method' => 'createGameTwo',
+        'controller' => '\app\Controllers\GameController'
+    ],
+    'game.createGameTwo'
 );
 // Route qui affiche le jeu 2 enfant :
 $router->map(
