@@ -35,21 +35,21 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 ### 3.Construction du PHP
 
 * Dynamiser les formulaires sur deux versions de jeu adulte : cases à remplir changent d'une partie à l'autre (pour alimenter toutes les tables de la BDD)
-*==>EN COURS
+* ==> OK
 * Dessiner le mocodo et créer la base de données
 * ==> OK
 * Installer les composers et le dossier vendor (altorouter)
 * ==> OK
 * Créer les controllers, views et models avec les namespaces
-* =>OK
+* => OK
 * Dynamiser les pages (découper en partials, les liens de page)
-* =>OK
+* => OK
 * MVC : suite avec altodispacher + subdivision des templates (layout) + ajouter une MVC error
-* =>OK
+* => OK
+* Dynamiser la version troll du jeu
+* ==> EN COURS
 
 ### 4.Construction du js
-
-* Sur la homepage, dynamiser l'apparition et disparition des règles du jeu
 
 * Sur la homepage, dynamiser les deux bulles de jeu (upgrader le design)
   
@@ -66,7 +66,7 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 #### BONUS
 
 * Créer un bouton jour/nuit pour le style : https://codepen.io/jesperkc/pen/pydMqb (cacher le jeu inutile avec display none)
-
+* ==> ANNULAX
 * Créer les versions responsive avec Bootstrap
 
 * Créer version hybride : l'utilisateur rentre des nombres de 1 à 1000 dans chaque case et l'ordinateur va choisir au hasard dans la BDD
