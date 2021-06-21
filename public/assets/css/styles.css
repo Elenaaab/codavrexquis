@@ -264,7 +264,7 @@ blockquote {
 }
 /* Liens */
 
-nav {
+footer {
     position:fixed;
     z-index:0;
 }
@@ -368,20 +368,22 @@ form {
 /* Résultat */
 
 .reponseex {
-    margin-top:150px;
+    margin-top:30px;
     font-size: 50px;
     text-align: center;
-    color: var(--couleur-nav);
+    color: var(--couleur-nav);    
+    font-weight: lighter;
+
 }
 .reponse {
-    margin-top:50px;
+    margin-top:30px;
     color : var(--couleur-texte1);
-    font-weight: lighter;
+    font-weight: bolder;
     border:none;
     border-bottom : solid 1px #4cced3;
     padding:10px;
-    max-width: 80%;
     text-align: center;
+    position: auto;
 }
 .reponsetroll {
     margin-top:50px;
@@ -394,5 +396,4 @@ form {
     max-width: 100%;
     text-align: center;
 }
-/* OPTION Interrupteur */
 

@@ -7,7 +7,6 @@ use app\Models\Complement;
 use app\Models\Verbe;
 
 
-
 class GameController extends CoreController {
 
             // Méthode de récupération des données POST sur jeuadulte1 :
@@ -40,7 +39,7 @@ class GameController extends CoreController {
             $newVerbe = Verbe::find();
             $newAdjectif2 = Adjectif::find();
             
-            $this->show('jeuadulte1', ['sujet' => $newSujet, 'adjectif' => $adjectif, 'verbe' => $newVerbe, 'complement' => $complement, 'adjectif' => $newAdjectif2]);
+            $this->show('jeuadulte1', ['sujet' => $newSujet, 'adjectif' => $adjectif, 'verbe' => $newVerbe, 'complement' => $complement, 'adjectif2' => $newAdjectif2]);
 
         } else {
             http_response_code(404);

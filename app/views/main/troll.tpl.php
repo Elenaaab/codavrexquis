@@ -6,10 +6,10 @@
         <p class="introjeu">Si tu es arrivé ici, bravo, c'est qu'un troll vit en toi ! Comme c'est trop tentant d'écrire n'importe quoi dans le formulaire, lâche-toi ici, écris ce que tu veux, la machine te répondra n'importe quoi elle aussi !<br>Ce tr0ll m0de est dédié à jh0n, a0dren et y0hann, une source de tr0ll-inspiration infinie.</p>
         <div>
 
-        <!-- Formulaire 1 -->
-        <!-- Champ à remplir dans action= est l'URL vers lequel la méthode GET va envoyer les données -->
+            <!-- Formulaire 1 -->
+            <!-- Champ à remplir dans action= est l'URL vers lequel la méthode POST va envoyer les données -->
 
-            <form class="row" action="./form.php" method="get">
+            <form class="row" action="./form.php" method="POST">
                 <!-- Mot choisi par l'ordinateur -->
                 <div class="col-2">
                     <label for="sujet"> </label>
@@ -43,9 +43,9 @@
                 <p>Votre c0davre exquis</p>
             </div>
         </div>
-       
+
         <!-- Formulaire 2 -->
-        <!-- Champ à remplir dans action= est l'URL vers lequel la méthode GET va envoyer les données -->
+        <!-- Champ à remplir dans action= est l'URL vers lequel la méthode POST va envoyer les données -->
 
         <div class="d-none">
             <form class="row" action="./form.php" method="get">
@@ -82,16 +82,6 @@
         <p class="exempletroll">Un slip - pourri - harcèle - un steak - vicieux</p>
         <div class="row reponseex">
             <p class="col-12">Votre c0davre exquis :</p>
-
-            <!-- Affichage de la phrase foreach + short tag  -->
-
-            <div class="d-none col-12 reponse">
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-                <div class="reponsetroll col-2"></div>
-            </div>
-            <div class="col-12 reponse"></div>
-        </div>            
+            <div class="d-none col-12 reponse"></div>
+        </div>
     </main>

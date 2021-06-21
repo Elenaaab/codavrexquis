@@ -51,6 +51,8 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 
 ### 4.Construction du js
 
+* Sur les pages de jeu adulte, faire apparaitre la réponse après que l'user clique sur "jouer"
+  
 * Sur la homepage, dynamiser les deux bulles de jeu (upgrader le design)
   
 * Dynamiser le troll mode avec bouton aléatoire qui se déplace sur la page d'accueil OU dans le code et fait apparaitre un bouton "troll mode" 

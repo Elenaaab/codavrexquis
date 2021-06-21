@@ -4,7 +4,6 @@
         <h1>c0davre exquis</h1>
         <h3>La version écrite</h3>
         <p class="introjeu">Remplissez les champs libre en laissant courir votre imagination. Le sujet et le verbe doivent être à la 3e personne du singulier.</p>
-        <div>
 
          <!-- Intégrer un élément cliquable pour choisir la version avec un display none -->
 
@@ -43,16 +42,11 @@
                     <input class="button" type="submit" value="JOUER">
                 </div>
             </form>
-    
         <p class="exemple">Un papillon - bleu - dévore - l'océan - profond</p>
         <div class="row reponseex">
             <p class="col-12">Votre c0davre exquis :</p>
-            <!-- Affichage de la phrase foreach + short tag  -->
-            <div class="d-none col-12">
-                <div class="col-12"></div>
-            </div>
-            <div class="col-12 reponse"></div>
+           <div class="col-12 reponse"><?= $viewVars['sujet'] . '-' . $viewVars['adjectif'] . '-' . $viewVars['verbe'] . '-' . $viewVars['complement']. '-' . $viewVars['adjectif'] ?></div>
         </div>  
         <!-- Bouton pour accéder à la version troll grâce au bouton qui se déplace aléatoirement en js sur la page -->
-        <h4><a class="d-none versionactive" href="<?= $router->generate('troll')?>">tr0ll m0de</a></h4>
+        <!-- <h4><a class="d-none versionactive" href=" $router->generate('troll')?>">tr0ll m0de</a></h4> -->
     </main>

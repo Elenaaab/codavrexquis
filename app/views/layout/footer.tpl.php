@@ -7,4 +7,4 @@
                 <li class="col-3 "><a  href="<?= $router->generate('main.info')?>">PROJET</a></li>
             </ul>
         </nav>
-    </footer>    
+</footer>    
