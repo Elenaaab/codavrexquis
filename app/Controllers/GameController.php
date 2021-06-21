@@ -9,21 +9,25 @@ use app\Models\Verbe;
 
 class GameController extends CoreController {
 
-            // Méthode de récupération des données POST sur jeuadulte1 :
+        // Méthode de récupération des données POST sur jeuadulte1 :
 
     public function createGame() {
 
 
         if (!empty($_POST)
-        && !empty($_POST["adjectif"])
-        && !empty($_POST["complement"]))
+        && !empty($_POST['adjectif'])
+        && !empty($_POST['complement']))
 
          {
+            //  On met les données au propre : 
+
             $adjectif = filter_input(INPUT_POST, 'adjectif');
             $complement = filter_input(INPUT_POST, 'complement');
 
             $adjectif = strtolower($adjectif);
             $complement = strtolower($complement);
+
+            // On insère les données dans la database : 
 
             $newAdjectif = new Adjectif();
             $newAdjectif->setWord($adjectif);
@@ -33,7 +37,7 @@ class GameController extends CoreController {
             $newComplement->setWord($complement);
             $newComplement->insert();
 
-            // On va chercher au hasard les mots manquants dans la bdd : 
+            // On va chercher au hasard les mots manquants dans la database : 
 
             $newSujet = Sujet::find();
             $newVerbe = Verbe::find();
@@ -54,11 +58,11 @@ class GameController extends CoreController {
         if (!empty($_POST)
         && !empty($_POST["sujet"])
         && !empty($_POST["verbe"])
-        && !empty($_POST["adjectif"])) {
+        && !empty($_POST["adjectif2"])) {
 
             $sujet = filter_input(INPUT_POST, 'sujet');
             $verbe = filter_input(INPUT_POST, 'verbe');
-            $adjectif2 = filter_input(INPUT_POST, 'adjectif');
+            $adjectif2 = filter_input(INPUT_POST, 'adjectif2');
 
             $sujet = strtolower($sujet);
             $verbe = strtolower($verbe);
@@ -76,12 +80,10 @@ class GameController extends CoreController {
             $newAdjectif->setWord($adjectif2);
             $newAdjectif->insert();
 
-            // On va chercher au hasard les mots manquants dans la bdd : 
-
             $newAdjectif = Adjectif::find();
             $newComplement = Complement::find();
             
-            $this->show('jeuadulte2', ['sujet' => $sujet, 'adjectif' => $newAdjectif, 'verbe' => $verbe, 'complement' => $newComplement, 'adjectif' => $adjectif2]);
+            $this->show('jeuadulte2', ['sujet' => $sujet, 'adjectif' => $newAdjectif, 'verbe' => $verbe, 'complement' => $newComplement, 'adjectif2' => $adjectif2]);
 
         } else {
             http_response_code(404);

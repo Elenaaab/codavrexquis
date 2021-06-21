@@ -27,9 +27,10 @@ class Verbe extends CoreModel
             )
         ";
     
-        $query = $pdo->prepare($sql);
-    
-        $query->bindValue(':word', $this->word, PDO::PARAM_STR);
+        $pdoStatement = $pdo->prepare($sql);
+        $pdoStatement->bindValue(':word', $this->word, PDO::PARAM_STR);
+        $ok = $pdoStatement->execute();
+        return $ok;
      }
     
 }
