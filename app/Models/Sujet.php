@@ -32,7 +32,6 @@ class Sujet extends CoreModel
         $query->bindValue(':word', $this->word, PDO::PARAM_STR);
      }
 
-    // Sur Troll : 
 
 
 
