@@ -45,14 +45,15 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Dynamiser les pages (découper en partials, les liens de page)
 * => OK
 * MVC : suite avec altodispacher + subdivision des templates (layout) + ajouter une MVC error
-* => OK
+* ==> OK
 * Dynamiser la version troll du jeu
-* ==> EN COURS
+* ==> OK
+* Créer la bdd de la version troll
 
 ### 4.Construction du js
 
 * Sur les pages de jeu adulte, faire apparaitre la réponse après que l'user clique sur "jouer"
-  
+  ==> EN COURS
 * Sur la homepage, dynamiser les deux bulles de jeu (upgrader le design)
   
 * Dynamiser le troll mode avec bouton aléatoire qui se déplace sur la page d'accueil OU dans le code et fait apparaitre un bouton "troll mode" 

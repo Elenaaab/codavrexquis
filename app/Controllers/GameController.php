@@ -92,27 +92,61 @@ class GameController extends CoreController {
         }
     }
 
+    // Méthode de la version troll : 
+
+    public function createTroll() {
+        if (!empty($_POST)
+        && !empty($_POST["verbe"])
+        && !empty($_POST["adjectif2"])) {
+
+            $verbe = filter_input(INPUT_POST, 'verbe');
+            $adjectif2 = filter_input(INPUT_POST, 'adjectif2');
+
+            $verbe = strtolower($verbe);
+            $adjectif2 = strtolower($adjectif2);
+
+            $newVerbe = new Verbe();
+            $newVerbe->setWord($verbe);
+            $newVerbe->insert();
+
+            $newAdjectif = new Adjectif();
+            $newAdjectif->setWord($adjectif2);
+            $newAdjectif->insert();
+
+            $newSujet = Sujet::find();
+            $newAdjectif = Adjectif::find();
+            $newComplement = Complement::find();
+            
+            $this->show('troll', ['sujet' => $newSujet, 'adjectif' => $newAdjectif, 'verbe' => $verbe, 'complement' => $newComplement, 'adjectif2' => $adjectif2]);
+
+        } else {
+            http_response_code(404);
+            $this->show('error/err404');
+            exit();
+        }
+    }
+
     // Affichage des pages jeux :
      
     public function gameOne()
     {
 
-        $this->show('jeuadulte1');
+        $this->show('jeuadulte1', ["sujet" => "","adjectif" => "","verbe" => "","complement" => "","adjectif2" => ""]);
     }
     public function gameOneTwo()
     {
 
-        $this->show('jeuadulte2');
+        $this->show('jeuadulte2',["sujet" => "","adjectif" => "","verbe" => "","complement" => "","adjectif2" => ""]);
     }
     public function gameTwo()
     {
 
-        $this->show('jeuenfant');
+        $this->show('jeuenfant',["sujet" => "","adjectif" => "","verbe" => "","complement" => "","adjectif2" => ""]);
     }
     public function gameThree()
     {
 
-        $this->show('troll');
+        $this->show('troll',["sujet" => "","adjectif" => "","verbe" => "","complement" => "","adjectif2" => ""]);
     }
 }
 

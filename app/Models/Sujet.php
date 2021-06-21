@@ -29,7 +29,7 @@ class Sujet extends CoreModel
     
         $pdoStatement = $pdo->prepare($sql);
         $pdoStatement->bindValue(':word', $this->word, PDO::PARAM_STR);
-        $ok = $pdoStatement->execute();
+        $ok = @$pdoStatement->execute();
         return $ok;
      }
 
