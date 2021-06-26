@@ -339,6 +339,22 @@ form {
     margin-top:5px;
     border:none;
 }
+
+.button2 { 
+    background-color: var(--couleur-nav);
+    color : var(--couleur-texte1);
+    font-weight:bold;
+    justify-content:center;
+    padding: 5px;
+    margin-top:5px;
+    border:none;
+    display:flex;
+    z-index: 2;
+    height:200px;
+    width:200px;
+    border-radius: 100px;
+}
+
 .buttontroll {
     background-color:fuchsia;
     color : white;

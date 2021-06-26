@@ -52,8 +52,6 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 
 ### 4.Construction du js
 
-* Sur les pages de jeu adulte, faire apparaitre la réponse après que l'user clique sur "jouer"
-  ==> EN COURS
 * Sur la homepage, dynamiser les deux bulles de jeu (upgrader le design)
   
 * Dynamiser le troll mode avec bouton aléatoire qui se déplace sur la page d'accueil OU dans le code et fait apparaitre un bouton "troll mode" 
@@ -63,9 +61,10 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Construire la page et le board de jeu version enfant et les formes/couleurs à sélectionner (html/css)
   ==> OK
 * Construire les correspondances entre formes/couleurs et BDD (PHP)
-
+  ==> OK
 * Dynamiser le board de jeu avec les dessins colorés (js)
-
+  ==> EN COURS
+  
 #### BONUS
 
 * Créer un bouton jour/nuit pour le style : https://codepen.io/jesperkc/pen/pydMqb (cacher le jeu inutile avec display none)

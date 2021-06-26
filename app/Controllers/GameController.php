@@ -92,6 +92,20 @@ class GameController extends CoreController {
         }
     }
 
+
+    // Méthode du jeuenfant (on utilise un formulaire vide pour afficher des mots) : 
+
+    public function createGameKids() {
+
+        $newSujet = Sujet::find();
+        $newAdjectif = Adjectif::find();
+        $newVerbe = Verbe::find();
+        $newComplement = Complement::find();
+        $newAdjectif2 = Adjectif::find();
+        $this->show('jeuenfant', ['sujet' => $newSujet, 'adjectif' => $newAdjectif, 'verbe' => $newVerbe, 'complement' => $newComplement, 'adjectif2' => $newAdjectif2]);
+
+    }
+
     // Méthode de la version troll : 
 
     public function createTroll() {

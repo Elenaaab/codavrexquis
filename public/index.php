@@ -89,10 +89,10 @@ $router->map(
     'POST',
     '/jeuenfant',
     [
-        'method' => 'create',
+        'method' => 'createGameKids',
         'controller' => '\app\Controllers\GameController'
     ],
-    'game.create'
+    'game.createGameKids'
 );
 // Route qui affiche le jeu troll :
 $router->map(
@@ -104,7 +104,7 @@ $router->map(
     ],
     'game.troll'
 );
-// Route qui récupère les infos du jeu 3 :
+// Route qui récupère les infos du jeu 3 troll :
 $router->map(
     'POST',
     '/troll',
