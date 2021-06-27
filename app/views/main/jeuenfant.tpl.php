@@ -11,50 +11,49 @@
                 la machine traduire votre dessin en c0davre exquis. <br> Il suffit de cliquer sur un dessin pour qu'il s'ajoute au tableau !</p>
         </div>
         <div class="indications row">
-            <h4 class="tableaux col-12">Votre c0davre exquis : <?= $viewVars['sujet'] . ' ' . $viewVars['adjectif'] . ' ' . $viewVars['verbe'] . ' ' . $viewVars['complement'] . ' ' . $viewVars['adjectif2'] ?> </h4>
-
+            <h4 class="d-none tableaux col-12">Votre c0davre exquis : <?= $viewVars['sujet'] . ' ' . $viewVars['adjectif'] . ' ' . $viewVars['verbe'] . ' ' . $viewVars['complement'] . ' ' . $viewVars['adjectif2'] ?> </h4>
             <div class="jeu col-6">
                 <!-- Lorsque l'utilisateur clique sur une forme, js la fait disparaitre de la div jeu et apparaitre dans la div tableau -->
                 <div class="espacejeu row">
-                    <div class="jeu forme1"></div>
-                    <div class="jeu forme2"></div>
-                    <div class="jeu forme3"></div>
-                    <div class="jeu forme4"></div>
-                    <div class="jeu forme5"></div>
-                    <div class="jeu forme6"></div>
-                    <div class="jeu forme7"></div>
-                    <div class="jeu forme8"></div>
-                    <div class="jeu forme9"></div>
-                    <div class="jeu forme10"></div>
-                    <div class="jeu forme11"></div>
+                    <div class="jeux forme1"></div>
+                    <div class="jeux forme2"></div>
+                    <div class="jeux forme3"></div>
+                    <div class="jeux forme4"></div>
+                    <div class="jeux forme5"></div>
+                    <div class="jeux forme6"></div>
+                    <div class="jeux forme7"></div>
+                    <div class="jeux forme8"></div>
+                    <div class="jeux forme9"></div>
+                    <div class="jeux forme10"></div>
+                    <div class="jeux forme11"></div>
                 </div>
             </div>
             <div class="tableau col-4">
                 <div class="espacejeu row">
                     <!-- Formulaire -->
-                    <form class="row" action="" method="POST">
-                        <div class="col-12">
-                            <input class="d-none button" type="submit" id="0" value="JOUER">
+                    <form class="row" action="" id="player" method="POST">
+                        <div class="col-12" id="0">
+                            <input class="d-none button" type="submit"  value="JOUER">
                         </div>
-                        <div class="d-none">
+                        <div class="d-none casereponse" id="1">
                             <label for="sujet"> </label>
-                            <input class="d-none" type="text" name="sujet" id="1">
+                            <input class="d-none" type="text" name="sujet" >
                         </div>
-                        <div class="d-none">
+                        <div class="d-none casereponse" id="2">
                             <label for="adjectif"> </label>
-                            <input class="d-none" type="text" name="adjectif" id="2">
+                            <input class="d-none" type="text" name="adjectif" >
                         </div>
-                        <div class="d-none">
+                        <div class="d-none casereponse" id="3">
                             <label for="verbe"> </label>
-                            <input class="d-none" type="text" name="verbe" id="3">
+                            <input class="d-none" type="text" name="verbe" >
                         </div>
-                        <div class="d-none">
+                        <div class="d-none casereponse" id="4">
                             <label for="complement"> </label>
-                            <input class="d-none" type="text" name="complement" id="4">
+                            <input class="d-none" type="text" name="complement" >
                         </div>
-                        <div class="d-none ">
+                        <div class="d-none casereponse" id="5">
                             <label for="adjectif2"> </label>
-                            <input class="d-none" type="text" name="adjectif2" id="5">
+                            <input class="d-none" type="text" name="adjectif2" >
                         </div>
                     </form>
                 </div>

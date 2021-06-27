@@ -12,30 +12,33 @@ let app = {
     addAllEventListeners: function () {
 
         // 1. On récupère l'élément :
-        let ElementOne = document.querySelector(".forme1");
-        let ElementTwo = document.querySelector(".forme2");
-        let ElementThree = document.querySelector(".forme3");
-        let ElementFour = document.querySelector(".forme4");
-        let ElementFive = document.querySelector(".forme5");
-        let ElementSix = document.querySelector(".forme6");
-        let ElementSeven = document.querySelector(".forme7");
-        let ElementEight = document.querySelector(".forme8");
-        let ElementNine = document.querySelector(".forme9");
-        let ElementTen = document.querySelector(".forme10");
-        let ElementEleven = document.querySelector(".forme11");
+        let elementOne = document.querySelector(".forme1");
+        let elementTwo = document.querySelector(".forme2");
+        let elementThree = document.querySelector(".forme3");
+        let elementFour = document.querySelector(".forme4");
+        let elementFive = document.querySelector(".forme5");
+        let elementSix = document.querySelector(".forme6");
+        let elementSeven = document.querySelector(".forme7");
+        let elementEight = document.querySelector(".forme8");
+        let elementNine = document.querySelector(".forme9");
+        let elementTen = document.querySelector(".forme10");
+        let elementEleven = document.querySelector(".forme11");
+        let elementSubmit = document.getElementById("player");
+
 
         // 2. On ajoute l'écouteur dessus : 
-        ElementOne.addEventListener('click', app.handleClickElement);
-        ElementTwo.addEventListener('click', app.handleClickElement);
-        ElementThree.addEventListener('click', app.handleClickElement);
-        ElementFour.addEventListener('click', app.handleClickElement);
-        ElementFive.addEventListener('click', app.handleClickElement);
-        ElementSix.addEventListener('click', app.handleClickElement);
-        ElementSeven.addEventListener('click', app.handleClickElement);
-        ElementEight.addEventListener('click', app.handleClickElement);
-        ElementNine.addEventListener('click', app.handleClickElement);
-        ElementTen.addEventListener('click', app.handleClickElement);
-        ElementEleven.addEventListener('click', app.handleClickElement);
+        elementOne.addEventListener('click', app.handleClickElement);
+        elementTwo.addEventListener('click', app.handleClickElement);
+        elementThree.addEventListener('click', app.handleClickElement);
+        elementFour.addEventListener('click', app.handleClickElement);
+        elementFive.addEventListener('click', app.handleClickElement);
+        elementSix.addEventListener('click', app.handleClickElement);
+        elementSeven.addEventListener('click', app.handleClickElement);
+        elementEight.addEventListener('click', app.handleClickElement);
+        elementNine.addEventListener('click', app.handleClickElement);
+        elementTen.addEventListener('click', app.handleClickElement);
+        elementEleven.addEventListener('click', app.handleClickElement);
+        elementSubmit.addEventListener('submit', app.handleSubmitElement);
 
     },
 
@@ -45,53 +48,47 @@ let app = {
 
         evt.preventDefault();
 
+        // !ETAPE 1  AU CLIC SUR UNE FORME ON LA FAIT DISPARAITRE 
         // Je pointe l'élément sur lequel un événement s'est produit du tableau de gauche
-        let ElementPlay = document.querySelector('.jeu');
+        let elementPlay = document.querySelector('.jeux');
         // Je change sa classe en d-none pour le faire disparaitre du tableau de gauche
-        ElementPlay.classList.replace('jeu', 'd-none');
-        // Ensuite je transfère sa classe à un élément du form qu'on pointe grâce à son id
-        
-        // Je pointe sur un élément du form via un id avec une condition sur l'id
-        let ElementResult = document.getElementById('1');
+        elementPlay.classList.replace('jeux', 'd-none');
 
+        // !ETAPE 2 ON CLONE LA DIV DE GAUCHE ET ON L'AJOUTE DANS UNE DIV PARENT DE DROITE
 
-        // Si l'id == 1 alors on retire le d-none de la forme centrale : 
-        if(ElementResult.id == 1) {
-        // Je pointe l'élément jouer du tableau de droite
-        let SubmitButton = document.querySelector('.button');
-        // Je lui ajoute la classe button2
-        SubmitButton.classList.remove('d-none');
-        // Et je fais apparaitre le bouton :
+        // Je pointe sur l'élément parent de droite
+        let elementResult = document.querySelector('.casereponse');
+        // Je lui enlève la classe d-none pour l'afficher
+        elementResult.classList.remove('d-none');
+        // Je clone l'élément de gauche à lui ajouter
+        let newElement = elementPlay.cloneNode(true);
+        // Je lui attache l'élément à lui ajouter
+        elementResult.appendChild(newElement);
+
+        // !ETAPE 3 ON POINTE SUR L'ELEMENT VIDE ET ON VERIFIE SON ID
+
+        if(elementResult.id == 1) {
+
         // Je pointe le bouton
-        let SubmitButton = document.querySelector('.button');
+        let submitButton = document.querySelector('.button');
          // Je lui retire la classe d-none
-         SubmitButton.classList.remove('d-none');
+         submitButton.classList.remove('d-none');
 
-        // Je pointe sur l'élément parent
-        // Je clone l'élément à lui ajouter
-        // Je lui attache l'élément à lui ajouter
-
-        //  Ensuite pour les éléments 2,3,4 on ajoute simplement la div de gauche à droite en la clonant
-        } else if (ElementResult.id == 2 || ElementResult.id == 3 || ElementResult.id == 4) {
-
-        // Je pointe sur l'élément parent
-        // Je clone l'élément à lui ajouter
-        // Je lui attache l'élément à lui ajouter
-
-
-        } else {
+        // Ensuite pour les éléments 2,3,4 on ajoute simplement la div de gauche à droite en la clonant
+        } else if (elementResult.id == 2 || elementResult.id == 3 || elementResult.id == 4) {
+        console.log('on se débrouille pas mal');
+        } else if (elementResult.id == 5) {
         // Si l'id == 5 alors on ajoute la classe button 2 de la forme centrale : 
 
         // Je pointe l'élément jouer du tableau de droite
-        SubmitButton = document.querySelector('.button');
-        // Je lui ajoute la classe button2
-        SubmitButton.classList.replace('button', 'button2');
+        submitButton = document.querySelector('.button');
+        // Je remplace sa classe
+        submitButton.classList.replace('button', 'button2');
         }
 
-        // Je pointe sur l'élément parent
-        // Je clone l'élément à lui ajouter
-        // Je lui attache l'élément à lui ajouter
+        // On ajoute une propriété CSS animation sur la classe qui fait apparaitre le cercle bleu
 
+        // !ETAPE 4 ON AMELIORE L'UX DU JEU     
         // ======================================================================================================
 
         // A gérer ensuite :        
@@ -101,6 +98,16 @@ let app = {
         // Je lui remove sa classe et lui add la classe d-none
         // La forme du tableau de gauche elle, remove sa classe d-none et reprend sa classe
     },
+
+    handleSubmitElement:function(evt) {
+
+    // Lorsque l'utilisateur soumet le formulaire, on affiche la réponse :
+    evt.preventDefault();
+    // 1. On pointe l'élément réponse du form
+    let elementResponse = document.querySelector(".tableaux");
+    // 2. On remplace la class "d-none" par "tableaux" pour afficher la ligne
+    elementResponse.classList.remove('d-none');
+    }
 
     // ===============================================================================
 
