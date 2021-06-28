@@ -46,6 +46,5 @@
             <p class="col-12">Votre c0davre exquis :</p>
             <div class="col-12 reponse"><?= $viewVars['sujet'] . ' ' . $viewVars['adjectif'] . ' ' . $viewVars['verbe'] . ' ' . $viewVars['complement'] . ' ' . $viewVars['adjectif2'] ?></div>
         </div>
-        <!-- Bouton pour accéder à la version troll grâce au bouton qui se déplace aléatoirement en js sur la page -->
-        <!-- <h4><a class="versionactive" href=" $router->generate('troll') ?>">tr0ll m0de</a></h4> -->
+
     </main>

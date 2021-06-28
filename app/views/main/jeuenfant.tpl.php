@@ -31,7 +31,7 @@
             <div class="tableau col-4">
                 <div class="espacejeu row">
                     <!-- Formulaire -->
-                    <form class="row" action="" id="player" method="POST">
+                    <form class="row espacejeu" action="" id="player" method="POST">
                         <div class="col-12" id="0">
                             <input class="d-none button" type="submit"  value="JOUER">
                         </div>

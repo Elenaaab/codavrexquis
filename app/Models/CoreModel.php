@@ -7,11 +7,14 @@ abstract class CoreModel {
     protected $id;
     protected $word;
 
-    // Methode du coremodel qui s'applique aux models sur les 2 ddb
+    // For regular game : 
 
     protected abstract static function find();
     protected abstract function insert();
 
+    // For troll game : 
+    protected abstract static function findTroll();
+    protected abstract function insertTroll();
 
     /**
      * Get the value of id

@@ -110,28 +110,34 @@ class GameController extends CoreController {
 
     public function createTroll() {
         if (!empty($_POST)
-        && !empty($_POST["verbe"])
-        && !empty($_POST["adjectif2"])) {
+        && !empty($_POST["sujet"])
+        && !empty($_POST["adjectif"])
+        && !empty($_POST["complement"])) {
 
-            $verbe = filter_input(INPUT_POST, 'verbe');
-            $adjectif2 = filter_input(INPUT_POST, 'adjectif2');
+            $sujet = filter_input(INPUT_POST, 'sujet');
+            $adjectif = filter_input(INPUT_POST, 'adjectif');
+            $complement = filter_input(INPUT_POST, 'complement');
 
-            $verbe = strtolower($verbe);
-            $adjectif2 = strtolower($adjectif2);
+            $newSujet = strtolower($sujet);
+            $newAdjectif = strtolower($adjectif);
+            $newComplement = strtolower($complement);
 
-            $newVerbe = new Verbe();
-            $newVerbe->setWord($verbe);
-            $newVerbe->insert();
+            $newSujet = new Sujet();
+            $newSujet->setWord($sujet);
+            $newSujet->insertTroll();
 
             $newAdjectif = new Adjectif();
-            $newAdjectif->setWord($adjectif2);
-            $newAdjectif->insert();
+            $newAdjectif->setWord($adjectif);
+            $newAdjectif->insertTroll();
 
-            $newSujet = Sujet::find();
-            $newAdjectif = Adjectif::find();
-            $newComplement = Complement::find();
+            $newComplement = new Complement();
+            $newComplement->setWord($complement);
+            $newComplement->insertTroll();
+
+            $newVerbe = Verbe::findTroll();
+            $newAdjectif2 = Adjectif::findTroll();
             
-            $this->show('troll', ['sujet' => $newSujet, 'adjectif' => $newAdjectif, 'verbe' => $verbe, 'complement' => $newComplement, 'adjectif2' => $adjectif2]);
+            $this->show('troll', ['sujet' => $sujet, 'adjectif' => $adjectif, 'verbe' => $newVerbe, 'complement' => $complement, 'adjectif2' => $newAdjectif2]);
 
         } else {
             http_response_code(404);

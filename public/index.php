@@ -102,7 +102,7 @@ $router->map(
         'method' => 'gameThree',
         'controller' => '\app\Controllers\GameController'
     ],
-    'game.troll'
+    'game.gameThree'
 );
 // Route qui récupère les infos du jeu 3 troll :
 $router->map(

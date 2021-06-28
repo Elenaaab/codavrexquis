@@ -41,15 +41,16 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Installer les composers et le dossier vendor (altorouter)
 * ==> OK
 * Créer les controllers, views et models avec les namespaces
-* => OK
+* ==> OK
 * Dynamiser les pages (découper en partials, les liens de page)
-* => OK
+* ==> OK
 * MVC : suite avec altodispacher + subdivision des templates (layout) + ajouter une MVC error
 * ==> OK
 * Dynamiser la version troll du jeu
 * ==> OK
 * Créer la bdd de la version troll
-
+* ==> OK
+  
 ### 4.Construction du js
 
 * Sur la homepage, dynamiser les deux bulles de jeu (upgrader le design)
@@ -66,14 +67,8 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
   ==> EN COURS
   
 #### BONUS
-
-* Créer un bouton jour/nuit pour le style : https://codepen.io/jesperkc/pen/pydMqb (cacher le jeu inutile avec display none)
-* ==> ANNULAX
+  
 * Créer les versions responsive avec Bootstrap
-
-* Créer version hybride : l'utilisateur rentre des nombres de 1 à 1000 dans chaque case et l'ordinateur va choisir au hasard dans la BDD
-
-* Enregistrer plusieurs parties d'affilée sur la page pour avoir plusieurs lignes en réponse
   
 * Proposer l'envoi par email de ses cOdavres
   

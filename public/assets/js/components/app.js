@@ -3,6 +3,9 @@ console.log('salut ca va');
 
 let app = {
 
+
+    counter : 1,
+
     init: function () {
         app.addAllEventListeners();
     },
@@ -48,22 +51,25 @@ let app = {
 
         evt.preventDefault();
 
-        // !ETAPE 1  AU CLIC SUR UNE FORME ON LA FAIT DISPARAITRE 
+        // !ETAPE 1 ON CLONE LA DIV DE GAUCHE ET ON L'AJOUTE DANS UNE DIV PARENT DE DROITE
+
         // Je pointe l'élément sur lequel un événement s'est produit du tableau de gauche
-        let elementPlay = document.querySelector('.jeux');
-        // Je change sa classe en d-none pour le faire disparaitre du tableau de gauche
-        elementPlay.classList.replace('jeux', 'd-none');
-
-        // !ETAPE 2 ON CLONE LA DIV DE GAUCHE ET ON L'AJOUTE DANS UNE DIV PARENT DE DROITE
-
+        let elementPlay = evt.currentTarget;
         // Je pointe sur l'élément parent de droite
-        let elementResult = document.querySelector('.casereponse');
+        let elementResult = document.getElementById(app.counter);
         // Je lui enlève la classe d-none pour l'afficher
         elementResult.classList.remove('d-none');
         // Je clone l'élément de gauche à lui ajouter
         let newElement = elementPlay.cloneNode(true);
         // Je lui attache l'élément à lui ajouter
         elementResult.appendChild(newElement);
+
+        // !ETAPE 2 ON FAIT DISPARAITRE LA DIV À GAUCHE ET ON INCRÉMENTE SON ID
+
+        // Je fais disparaitre l'élément du tableau de gauche
+         elementPlay.classList.replace('jeux', 'd-none');  
+        // J'incrémente la variable counter à chaque tour
+        app.counter++;   
 
         // !ETAPE 3 ON POINTE SUR L'ELEMENT VIDE ET ON VERIFIE SON ID
 
@@ -73,13 +79,19 @@ let app = {
         let submitButton = document.querySelector('.button');
          // Je lui retire la classe d-none
          submitButton.classList.remove('d-none');
+        // Je lui ajoute une classe
+        elementResult.classList.add('button3');
 
         // Ensuite pour les éléments 2,3,4 on ajoute simplement la div de gauche à droite en la clonant
         } else if (elementResult.id == 2 || elementResult.id == 3 || elementResult.id == 4) {
         console.log('on se débrouille pas mal');
-        } else if (elementResult.id == 5) {
-        // Si l'id == 5 alors on ajoute la classe button 2 de la forme centrale : 
+        // Je lui ajoute une classe
+        elementResult.classList.add('button4');
 
+        // Si l'id == 5 alors on ajoute la classe button 2 de la forme centrale : 
+        } else if (elementResult.id == 5) {
+        // Je lui ajoute une classe
+        elementResult.classList.add('button5');
         // Je pointe l'élément jouer du tableau de droite
         submitButton = document.querySelector('.button');
         // Je remplace sa classe
