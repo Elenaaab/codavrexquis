@@ -26,7 +26,7 @@ let app = {
         let elementNine = document.querySelector(".forme9");
         let elementTen = document.querySelector(".forme10");
         let elementEleven = document.querySelector(".forme11");
-        let elementSubmit = document.getElementById("player");
+        // let elementSubmit = document.getElementById("player");
 
 
         // 2. On ajoute l'écouteur dessus : 
@@ -41,7 +41,7 @@ let app = {
         elementNine.addEventListener('click', app.handleClickElement);
         elementTen.addEventListener('click', app.handleClickElement);
         elementEleven.addEventListener('click', app.handleClickElement);
-        elementSubmit.addEventListener('submit', app.handleSubmitElement);
+        // elementSubmit.addEventListener('submit', app.handleSubmitElement);
 
     },
 
@@ -75,36 +75,46 @@ let app = {
 
         if(elementResult.id == 1) {
 
-        // Je pointe le bouton
-        let submitButton = document.querySelector('.button');
-         // Je lui retire la classe d-none
-         submitButton.classList.remove('d-none');
+        // Je pointe l'espace de jeu de droite
+        let gameBoard = document.querySelector('.tableau');
+        // Je lui change sa classe
+        gameBoard.classList.replace('tableau','tableau2')
         // Je lui ajoute une classe
         elementResult.classList.add('button3');
 
-        // Ensuite pour les éléments 2,3,4 on ajoute simplement la div de gauche à droite en la clonant
-        } else if (elementResult.id == 2 || elementResult.id == 3 || elementResult.id == 4) {
+
+        } else if (elementResult.id == 2) {
         console.log('on se débrouille pas mal');
         // Je lui ajoute une classe
         elementResult.classList.add('button4');
 
+        } else if (elementResult.id == 3) {
+        // Je lui ajoute une classe
+        elementResult.classList.add('button5');
+
+        } else if (elementResult.id == 4) {
+        // Je lui ajoute une classe
+        elementResult.classList.add('button7');
+
         // Si l'id == 5 alors on ajoute la classe button 2 de la forme centrale : 
         } else if (elementResult.id == 5) {
         // Je lui ajoute une classe
-        elementResult.classList.add('button5');
+        elementResult.classList.add('button6');
         // Je pointe l'élément jouer du tableau de droite
         submitButton = document.querySelector('.button');
         // Je remplace sa classe
         submitButton.classList.replace('button', 'button2');
+        // Je lui retire la classe d-none
+         submitButton.classList.remove('d-none');
         }
 
-        // On ajoute une propriété CSS animation sur la classe qui fait apparaitre le cercle bleu
-
+        // !======================================================================================================
         // !ETAPE 4 ON AMELIORE L'UX DU JEU     
-        // ======================================================================================================
+        // !======================================================================================================
 
-        // A gérer ensuite :        
+        // A gérer ensuite :  
 
+        // On ajoute une propriété CSS animation sur la classe qui fait apparaitre le cercle bleu
         // Si la personne se ravise, au clic sur la forme, elle reprend sa place dans le tableau de gauche donc : 
         // Je cible l'élément au clic
         // Je lui remove sa classe et lui add la classe d-none

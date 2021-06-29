@@ -1,3 +1,5 @@
+<?php dump($viewVars); ?>
+
 <body>
     <div class="deco4"></div>
     <div class="deco5"></div>
@@ -11,9 +13,9 @@
                 la machine traduire votre dessin en c0davre exquis. <br> Il suffit de cliquer sur un dessin pour qu'il s'ajoute au tableau !</p>
         </div>
         <div class="indications row">
-            <h4 class="d-none tableaux col-12">Votre c0davre exquis : <?= $viewVars['sujet'] . ' ' . $viewVars['adjectif'] . ' ' . $viewVars['verbe'] . ' ' . $viewVars['complement'] . ' ' . $viewVars['adjectif2'] ?> </h4>
+            <h4 class="tableaux col-12">Votre c0davre exquis : <?= $viewVars['sujet'] . ' ' . $viewVars['adjectif'] . ' ' . $viewVars['verbe'] . ' ' . $viewVars['complement'] . ' ' . $viewVars['adjectif2'] ?> </h4>
             <div class="jeu col-6">
-                <!-- Lorsque l'utilisateur clique sur une forme, js la fait disparaitre de la div jeu et apparaitre dans la div tableau -->
+                <!-- Espace de jeu de départ-->
                 <div class="espacejeu row">
                     <div class="jeux forme1"></div>
                     <div class="jeux forme2"></div>
@@ -30,31 +32,32 @@
             </div>
             <div class="tableau col-4">
                 <div class="espacejeu row">
-                    <!-- Formulaire -->
-                    <form class="row espacejeu" action="" id="player" method="POST">
+                    <!-- Espace de jeu résultat -->
+                    <form class="row espacejeu" action="<?=$router->generate('game.createGameKids')?>" id="player" method="POST">
                         <div class="col-12" id="0">
-                            <input class="d-none button" type="submit"  value="JOUER">
+                            <input class="d-none button" type="submit" value="JOUER">
                         </div>
                         <div class="d-none casereponse" id="1">
                             <label for="sujet"> </label>
-                            <input class="d-none" type="text" name="sujet" >
+                            <input class="d-none" type="text" name="sujet">
                         </div>
                         <div class="d-none casereponse" id="2">
                             <label for="adjectif"> </label>
-                            <input class="d-none" type="text" name="adjectif" >
+                            <input class="d-none" type="text" name="adjectif">
                         </div>
                         <div class="d-none casereponse" id="3">
                             <label for="verbe"> </label>
-                            <input class="d-none" type="text" name="verbe" >
+                            <input class="d-none" type="text" name="verbe">
                         </div>
                         <div class="d-none casereponse" id="4">
                             <label for="complement"> </label>
-                            <input class="d-none" type="text" name="complement" >
+                            <input class="d-none" type="text" name="complement">
                         </div>
                         <div class="d-none casereponse" id="5">
                             <label for="adjectif2"> </label>
-                            <input class="d-none" type="text" name="adjectif2" >
+                            <input class="d-none" type="text" name="adjectif2">
                         </div>
+                        
                     </form>
                 </div>
             </div>

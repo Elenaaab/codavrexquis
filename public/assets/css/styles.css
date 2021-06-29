@@ -91,14 +91,12 @@ body {
     z-index: 0;
 }
 
-
 .espacejeu {
     display:flex;
     align-content: center;
     justify-content: center;
     height: 500px; 
 	width: 600px; 
-
 }
 .tableau {
     display:inline-block;
@@ -106,6 +104,18 @@ body {
     font-size: var(--texte);
     text-align: center;
     background-color:white;
+    border:none;
+    height: 500px; 
+	width: 600px; 
+    z-index: 0;
+}
+
+.tableau2 {
+    display:inline-block;
+    margin:4px;
+    font-size: var(--texte);
+    text-align: center;
+    background-color:rgb(0, 247, 255);
     border:none;
     height: 500px; 
 	width: 600px; 
@@ -237,6 +247,7 @@ h5 {
 }
 .tableaux {
     display:inline;
+    color: var(--couleur-texte1);
 }
 /* Partie main  */
 .main {
@@ -273,7 +284,7 @@ blockquote {
 
 nav {
     position:fixed;
-    z-index:0;
+    z-index:3;
 }
  nav a {
     text-decoration: none;
@@ -286,6 +297,7 @@ nav a:focus, a:hover {
     font-size: 14px;
     font-weight: bold;
     color:var(--couleur-nav);
+    border:none;
 }
 a {
     text-decoration: none;
@@ -314,7 +326,6 @@ li {
      color:white;
 }
 /* Formulaire */
-
 form {
     display: flex;
     color:white;
@@ -346,7 +357,6 @@ form {
     margin-top:5px;
     border:none;
 }
-
 .button2 { 
     background-color: var(--couleur-nav);
     color : var(--couleur-texte1);
@@ -357,11 +367,10 @@ form {
     border:none;
     display:flex;
     z-index: 2;
-    height:100px;
-    width:100px;
-    border-radius: 50px;
+    height:50px;
+    width:50px;
+    border-radius: 25px;
 }
-
 .button3{
     background-color: rgb(60, 60, 138);
     display:flex;
@@ -370,9 +379,8 @@ form {
     width:200px;
     border-radius: 100px;
 }
-
 .button4{
-    background-color: rgb(50, 50, 165);
+    background-color: rgb(24, 172, 4);
     display:flex;
     z-index: 0;
     height:100px;
@@ -381,6 +389,22 @@ form {
 }
 .button5{
     background-color: rgb(240, 236, 16);
+    display:flex;
+    z-index: 0;
+    height:150px;
+    width:150px;
+    border-radius: 75px;
+}
+.button6{
+    background-color: rgb(218, 11, 45);
+    display:flex;
+    z-index: 0;
+    height:100px;
+    width:100px;
+    border-radius: 50px;
+}
+.button7{
+    background-color: rgb(202, 6, 192);
     display:flex;
     z-index: 0;
     height:150px;
@@ -397,7 +421,6 @@ form {
     border:solid 4px white;
 }
 /* Phrase exemple */
-
 .exemple {
     font-size: 30px;
     text-align: center;
@@ -411,17 +434,14 @@ form {
     font-weight: lighter;
     color: white;
     margin-top:40px;
-
 }
 /* Résultat */
-
 .reponseex {
     margin-top:30px;
     font-size: 50px;
     text-align: center;
     color: var(--couleur-nav);    
     font-weight: lighter;
-
 }
 .reponse {
     margin-top:50px;

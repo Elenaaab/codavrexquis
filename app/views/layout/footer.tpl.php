@@ -1,4 +1,4 @@
-<footer class="container d-flex justify-content-center">
+<footer class="navigateur container d-flex justify-content-center">
         <nav class="row">
             <ul class="d-flex align-items-center">
                 <li class="col-3 "><a  href="<?= $router->generate('main.home')?>">HOME</a></li>

@@ -32,5 +32,5 @@
             </div>
         </div>
         <!-- Bouton pour accéder à la version troll grâce au bouton qui se déplace aléatoirement en js sur la page -->
-        <h4><a class="versionactive" href="<?= $router->generate('game.gameThree') ?>">tr0ll</a></h4>
+        <!-- <h4><a class="versionactive" href=" $router->generate('game.gameThree') ?>">tr0ll</a></h4> -->
     </main>

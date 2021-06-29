@@ -102,6 +102,7 @@ class GameController extends CoreController {
         $newVerbe = Verbe::find();
         $newComplement = Complement::find();
         $newAdjectif2 = Adjectif::find();
+
         $this->show('jeuenfant', ['sujet' => $newSujet, 'adjectif' => $newAdjectif, 'verbe' => $newVerbe, 'complement' => $newComplement, 'adjectif2' => $newAdjectif2]);
 
     }
