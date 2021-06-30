@@ -1,5 +1,3 @@
-<?php dump($viewVars); ?>
-
 <body>
     <div class="deco4"></div>
     <div class="deco5"></div>
@@ -57,7 +55,6 @@
                             <label for="adjectif2"> </label>
                             <input class="d-none" type="text" name="adjectif2">
                         </div>
-                        
                     </form>
                 </div>
             </div>

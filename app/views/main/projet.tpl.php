@@ -1,6 +1,6 @@
 <body>
-    <div class="deco1"></div>
     <div class="deco2"></div>
+    <div class="deco6"></div>
     <header class="row">
         <h1 class="d-flex justify-content-center">c0davre exquis</h1>
         <h2 class="d-flex justify-content-center">du surréalisme p0étique à la Big Data</h2>
@@ -20,4 +20,6 @@
             <h5 class="col-12 d-flex justify-content-center"><a  href="mailto:ellelaby@gmail.com">Par mail</a></h5>
             <h5 class="col-12 d-flex justify-content-center"><a  href="https://github.com/Elenaaab">Github</a></h5>
         </div>
+     <!-- Salut à toi jeune hacker ! Maintenant que tu m'as trouvé, tu vas cliquer ? La question elle est vite répondue -->
+        <h4><a class="troll" href="<?= $router->generate('game.gameThree') ?>">tr0ll</a></h4>
     </main>
