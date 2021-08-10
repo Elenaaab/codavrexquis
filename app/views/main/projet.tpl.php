@@ -13,7 +13,7 @@
             </div>
             <div class="rules col-4">
                 <h3 class="d-flex justify-content-center">techn0s</h3>
-                <p class="d-flex justify-content-center">L'idée étant de mettre en application ce que j'ai appris en formation O'clock pendant le socle de 3 mois, le choix était vite vu. Structure et style sont en purs HTML5 et CSS3, avec le soutien de Boostrap5 pour le placement des éléments en flebox. Le back est en PHP7 en structure MVC et les requêtes sont faites via MYSQL. J'ai également utilisé les composants Altorouter et Altodispacher. Les interactions dynamiques sont faites en javascript. Mon projet est en open source sur Github, merci par avance à ceux qui souhaiteront y contribuer ! </p>
+                <p class="d-flex justify-content-center">L'idée étant de mettre en application ce que j'ai appris en formation O'clock pendant le socle de 3 mois, le choix était vite vu. Structure et style sont en purs HTML5 et CSS3, avec le soutien de Boostrap5 pour le placement des éléments en flexbox. Le back est en PHP7 en structure MVC et les requêtes sont faites via MYSQL. J'ai également utilisé les composants Altorouter et Altodispacher. Les interactions dynamiques sont faites en javascript. Mon projet est en open source sur Github, merci par avance à ceux qui souhaiteront y contribuer ! </p>
             </div>
             <div class="row"></div>
             <h3 class="col-12 d-flex justify-content-center">c0ntact</h3>

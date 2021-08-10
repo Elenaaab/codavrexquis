@@ -64,7 +64,7 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Construire les correspondances entre formes/couleurs et BDD (PHP)
   ==> OK
 * Dynamiser le board de jeu avec les dessins colorés (js)
-  ==> EN COURS
+  ==> OK
   
 #### BONUS
   
