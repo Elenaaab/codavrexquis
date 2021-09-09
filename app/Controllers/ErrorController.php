@@ -1,13 +1,16 @@
 <?php
 
-namespace App\Controllers;
+namespace app\Controllers;
 
 class ErrorController extends CoreController {
 
     public function err404() {
         
         header('HTTP/1.0 404 Not Found');
+        
+        global $router;
 
-        $this->show('error/err404');
+        require __DIR__ . "/../views/error/error.tpl.php";
+
     }
 }

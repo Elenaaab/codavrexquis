@@ -35,21 +35,23 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 ### 3.Construction du PHP
 
 * Dynamiser les formulaires sur deux versions de jeu adulte : cases à remplir changent d'une partie à l'autre (pour alimenter toutes les tables de la BDD)
-*==>EN COURS
+* ==> OK
 * Dessiner le mocodo et créer la base de données
 * ==> OK
 * Installer les composers et le dossier vendor (altorouter)
 * ==> OK
 * Créer les controllers, views et models avec les namespaces
-* =>OK
+* ==> OK
 * Dynamiser les pages (découper en partials, les liens de page)
-* =>OK
+* ==> OK
 * MVC : suite avec altodispacher + subdivision des templates (layout) + ajouter une MVC error
-* =>OK
-
+* ==> OK
+* Dynamiser la version troll du jeu
+* ==> OK
+* Créer la bdd de la version troll
+* ==> OK
+  
 ### 4.Construction du js
-
-* Sur la homepage, dynamiser l'apparition et disparition des règles du jeu
 
 * Sur la homepage, dynamiser les deux bulles de jeu (upgrader le design)
   
@@ -60,21 +62,18 @@ Projet de page dynamique pour jouer au Cadavre Exquis : deux versions seront pro
 * Construire la page et le board de jeu version enfant et les formes/couleurs à sélectionner (html/css)
   ==> OK
 * Construire les correspondances entre formes/couleurs et BDD (PHP)
-
+  ==> OK
 * Dynamiser le board de jeu avec les dessins colorés (js)
-
+  ==> OK
+  
 #### BONUS
-
-* Créer un bouton jour/nuit pour le style : https://codepen.io/jesperkc/pen/pydMqb (cacher le jeu inutile avec display none)
-
+  
 * Créer les versions responsive avec Bootstrap
-
-* Créer version hybride : l'utilisateur rentre des nombres de 1 à 1000 dans chaque case et l'ordinateur va choisir au hasard dans la BDD
-
-* Enregistrer plusieurs parties d'affilée sur la page pour avoir plusieurs lignes en réponse
   
 * Proposer l'envoi par email de ses cOdavres
   
 * Dynamiser la nav avec la page active
   
 * A chaque fois qu'on rafraichit le navigateur, les formes changent de place dans le tableau du jeu enfant
+
+* Connexion à une API via ajax pour alimenter le jeu (API vocabulaire)

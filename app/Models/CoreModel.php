@@ -2,15 +2,19 @@
 
 namespace app\Models;
 
-use \app\utils\Database;
-use \PDO;
-
-class CoreModel {
+abstract class CoreModel {
 
     protected $id;
     protected $word;
-    protected $type;
 
+    // For regular game : 
+
+    protected abstract static function find();
+    protected abstract function insert();
+
+    // For troll game : 
+    protected abstract static function findTroll();
+    protected abstract function insertTroll();
 
     /**
      * Get the value of id
@@ -26,14 +30,6 @@ class CoreModel {
     public function getWord()
     {
         return $this->word;
-    }
-
-    /**
-     * Get the value of type
-     */ 
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**
@@ -60,15 +56,4 @@ class CoreModel {
         return $this;
     }
 
-    /**
-     * Set the value of type
-     *
-     * @return  self
-     */ 
-    public function setType($type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
 }
